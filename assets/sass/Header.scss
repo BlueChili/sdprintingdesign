@@ -1,0 +1,12 @@
+header {
+  height: 4em;
+  background: radial-gradient(circle, var(--primary-blue) 0%, #FFF 0%, #7FCCEA 0%, var(--primary-blue) 100%);
+  box-shadow: 0 0 4px 0 rgba(19,19,19,0.89);
+  display: flex;
+  align-items: center;
+  padding: 0 0.5em;
+  position: sticky;
+}
+header .mediaicon { height: 2em; width: 2em; }
+header .socialmedia { margin-left: auto; }
+header .logo { width: 10em;}

@@ -1,0 +1,22 @@
+.nv {
+  box-sizing: border-box;
+  overflow-x: auto;
+  background-color: #fefefe;
+  width: 100%;
+  white-space: nowrap;
+  margin-bottom: 0.5em;
+  @media all and (min-width: 600px) {
+    overflow-x: hidden;
+  }
+}
+
+.nv-link {
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 1.4em;
+  padding: 0.5em 1em 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Nunito Sans';
+  color: var(--primary-blue);
+} 

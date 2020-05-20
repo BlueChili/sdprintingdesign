@@ -1,0 +1,122 @@
+.pd-ImgSlider {
+  overflow: hidden;
+  margin: 2vw;
+}
+
+.pd-ImgContainer {
+  display: flex;
+  width: 98vw;
+  height: 98vw;
+  border-radius: 3px;
+  border: 1px solid var(--primary-blue);
+  transition: transform 0.33s;
+  margin:0;
+  transition-timing-function: cubic-bezier(.82,.72,.32,.92);
+}
+
+.pd-Img {
+  width: 100%;
+  height: auto;
+}
+
+.pd-ThumbContainer {
+  padding: 0.5em;
+  text-align: center;
+}
+
+.pd-Thumbnail {
+  height: 2em;
+  width: 2em;
+  margin-right: 10px;
+}
+
+.pd-Title { 
+  color: var(--primary-blue);
+  margin: 0 0 18px 18px;
+  padding: 0;
+}
+
+.pd-Description {
+  padding: 0 1em;
+  p {margin-top: 0;}
+}
+
+.pd-PreConfig {
+  border-radius: 2px;
+  border: 1px solid var(--primary-blue);
+  width: auto;
+  cursor: pointer;
+}
+
+.pd-PreConfContainer {
+  padding: 0 1em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  div:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.pd-PreConfig {
+  flex-shrink: 0;
+  margin-bottom: 0.8em;
+  margin-right: 1.5em;
+  padding: 0.3em;
+  border-radius: 2px;
+  will-change: box-shadow;
+  transition: box-shadow 0.333s;
+  &:hover {
+    box-shadow: 0 2px 3px 0 rgba(255,130,130,0.66);
+  }
+}
+.pd-PreConfig_Active{
+  position: relative;
+  box-shadow: 0 2px 3px 0 rgba(255,130,130,0.66);
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: calc(50% - 4px);
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    z-index: 2;
+    background: rgb(255, 130, 130);
+    will-change: transform;
+    animation: slideup 0.4s forwards;
+    transform: scaleY(0);
+    transform-origin: bottom center;
+  }
+}
+.pd-PreConfig_Title { 
+  font-weight: 700;
+  margin: 0; padding: 0;
+}
+.pd-PreConfig_Price { 
+  font-weight: 700;
+  margin: 0; padding: 0; 
+  color: var(--primary-red);}
+
+.pd-PreConfigDetails {
+  h3 {
+    margin: 0 0 0 1em;
+    padding: 0;
+    font-size: 1.3em;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+    margin-left: 2em;
+  }
+}
+@keyframes slideup {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+

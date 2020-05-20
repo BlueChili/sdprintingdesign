@@ -1,17 +1,32 @@
 footer {
-  background: yellow;
-  display: flex;
+  background-color: #f2e500;
+  font-family: 'Nunito Sans', sans-serif;
   .business-info {
     padding-top: 2em;
-    p { margin-top: 0; }
+    padding-bottom: 2em;
+    p:first-child {
+      font-size: 1.2em;
+    }
+    p { 
+      margin: 0 1em;
+      font-weight: 700;
+      color: var(--primary-text);
+      // line-height: 1.5em;
+    }
   }
   .links {
     padding-top: 2em;
+    text-align: center;
     a{
       display: block;
+      font-size: 1.4em;
+      font-weight: 100;
       text-decoration: none;
-      margin-bottom: 1em;
       line-height: 1.5em;
+      color: var(--primary-text);
+      &:visited {
+        color: var(--primary-text);
+      }
     }
   }
 }

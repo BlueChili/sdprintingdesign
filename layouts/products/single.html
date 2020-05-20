@@ -1,0 +1,42 @@
+{{ define "main" }}
+
+    {{ partial "SideNavbar.html" }}
+
+    <div class="pd-ImgSlider">
+        <div class="pd-ImgContainer">
+            {{ range $url := .Params.Images }}
+            <img class="pd-Img" src="{{ $url }}" alt="">
+            {{ end }}
+        </div>
+        <div class="pd-ThumbContainer">
+            {{ range $index, $url := .Params.Images }}
+            <img class="pd-Thumbnail" src="{{- $url -}}" alt="" data-index="{{- $index -}}">
+            {{ end }}
+        </div>
+    </div>
+    <h1 class="pd-Title">{{- .Title -}}</h1>
+    <div class="pd-Description">
+        <p>A complete Selection of products to protect your personel and your customers, while being able to do business as close to normal as possible</p>
+    </div>
+    <div class="pd-PreConfContainer">
+        <div class="pd-PreConfig pd-PreConfig_Active" data-preconfig="0">
+            <p class="pd-PreConfig_Title">A-Sign & Window Decal</p>
+            <p class="pd-PreConfig_Price">$9.99</p>
+        </div>
+        <div class="pd-PreConfig" data-preconfig="1">
+            <p class="pd-PreConfig_Title">3x Floor Stickers</p>
+            <p class="pd-PreConfig_Price">$10.99</p>
+        </div>
+        <div class="pd-PreConfig" data-preconfig="2">
+            <p class="pd-PreConfig_Title">2x Window Decals Bundle</p>
+            <p class="pd-PreConfig_Price">$9.99</p>
+        </div>
+    </div>
+    <div class="pd-PreConfigDetails">
+        <h3>Configuration Characteristics</h3>
+        {{ range $item := .Params.Characteristics }}
+        <p>{{- $item -}}</p>
+        {{ end }}
+    </div>
+    <script src="/js/product.js"></script>
+{{ end }}

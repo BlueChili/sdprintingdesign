@@ -19,9 +19,9 @@ featuredCards.forEach((card) => {
   function toggleSlider (event) {
     event.preventDefault();
     const windowWidth = rootElement.clientWidth;
-    const displacementBase = (windowWidth <= 400) ? -98 : -47
     const index = event.target.dataset.index;
-    imagesContainer.style.transform = `translate3d(${index * displacementBase}vw, 0 ,0)`;
+    const displacementBase = document.querySelector(`.pc-featured_Image`).getBoundingClientRect().width;
+    imagesContainer.style.transform = `translate3d(-${index * displacementBase}px, 0 ,0)`;
   }
 });
 

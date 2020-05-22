@@ -3,6 +3,7 @@
   --light-blue: #00AAFE;
   --primary-red: #E40087;
   --primary-text: #393939;
+  --primary-green: #00EFBD;
 }
 $mq-md: 401px;
 * { box-sizing: border-box; }
@@ -14,7 +15,7 @@ $mq-md: 401px;
 @import "Product_Single.scss";
 
 body { padding: 0; margin: 0; font-size: 16px;}
-h1, h2, h3, h4, p, button, span, pre, a { color: var(--primary-text); font-family: 'Nunito Sans';}
+h1, h2, h3, h4, p, button, span, pre, a, label, input, select, option { color: var(--primary-text); font-family: 'Nunito Sans';}
 
 
 /* Start of the product card component definition */

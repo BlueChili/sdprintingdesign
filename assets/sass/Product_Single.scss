@@ -89,34 +89,80 @@
     transform-origin: bottom center;
   }
 }
-.pd-PreConfig_Title { 
-  font-weight: 700;
-  margin: 0; padding: 0;
-}
-.pd-PreConfig_Price { 
-  font-weight: 700;
-  margin: 0; padding: 0; 
-  color: var(--primary-red);}
+.pd-PreConfig_Title { font-weight: 700; margin: 0; padding: 0; }
+.pd-PreConfig_Price { font-weight: 700; margin: 0; padding: 0; color: var(--primary-red);}
 
 .pd-PreConfigDetails {
-  h3 {
-    margin: 0 0 0 1em;
-    padding: 0;
-    font-size: 1.3em;
-  }
+  display: none;
+  margin-bottom: 1em;
+  h3 { margin: 0 0 0 1em; padding: 0; font-size: 1.3em; }
+  p { padding: 0; margin: 0; margin-left: 2em; }
+}
+
+.pd-PreConfigDetails_Active { 
+  display: block; 
   p {
-    padding: 0;
-    margin: 0;
-    margin-left: 2em;
+    opacity: 0; 
+    animation: fadeIn 0.666s ease-out forwards;
   }
 }
+
+.pd-AddToCart {
+  border: 0;
+  background: var(--primary-blue);
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--primary-text);
+  padding: 0.5em 1em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+.pd-CustomizeProduct {
+  border: 0;
+  display: block;
+  background: var(--primary-green);
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--primary-text);
+  padding: 0.5em 1em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+.pd-Configurator {
+  background: var(--primary-green);
+  font-weight: 600;
+  position: relative;
+  padding: 1.3em;
+  span {
+    position: relative;
+    label { display: block; 
+      margin-bottom: 0.3em;
+      font-size: 1.3em;
+      font-weight: 700;
+      color: var(--primary-text);
+    }
+    input { 
+      border-radius: 4px; 
+      width: 100%;
+      border: 0px;
+      background: #f2f2f2;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+      padding: 0.4em 0.6em;
+      line-height: 2;
+      &:focus {
+        box-shadow: 0 0 3px 0 #39f, 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+
 @keyframes slideup {
-  from {
-    transform: scaleY(0);
-  }
-  to {
-    transform: scaleY(1);
-  }
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
 }
-
-
+@keyframes fadeIn {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}

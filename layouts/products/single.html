@@ -19,24 +19,28 @@
         <p>A complete Selection of products to protect your personel and your customers, while being able to do business as close to normal as possible</p>
     </div>
     <div class="pd-PreConfContainer">
-        <div class="pd-PreConfig pd-PreConfig_Active" data-preconfig="0">
-            <p class="pd-PreConfig_Title">A-Sign & Window Decal</p>
-            <p class="pd-PreConfig_Price">$9.99</p>
-        </div>
-        <div class="pd-PreConfig" data-preconfig="1">
-            <p class="pd-PreConfig_Title">3x Floor Stickers</p>
-            <p class="pd-PreConfig_Price">$10.99</p>
-        </div>
-        <div class="pd-PreConfig" data-preconfig="2">
-            <p class="pd-PreConfig_Title">2x Window Decals Bundle</p>
-            <p class="pd-PreConfig_Price">$9.99</p>
-        </div>
+    {{ range $index, $item := .Params.Characteristics }}
+    <div class="pd-PreConfig {{ if eq $index 0}}pd-PreConfig_Active{{ end }}" data-preconfig="{{- $index -}}">
+        <p class="pd-PreConfig_Title" data-preconfig="{{- $index -}}">{{ $item.title }}</p>
+        <p class="pd-PreConfig_Price" data-preconfig="{{- $index -}}">{{ $item.price }}</p>
     </div>
-    <div class="pd-PreConfigDetails">
+    {{ end }}
+    </div>
+    {{ range $index, $item := .Params.Characteristics }}
+    <div class="pd-PreConfigDetails {{ if eq $index 0}}pd-PreConfigDetails_Active{{ end }}" data-conf="{{- $index -}}">
         <h3>Configuration Characteristics</h3>
-        {{ range $item := .Params.Characteristics }}
-        <p>{{- $item -}}</p>
-        {{ end }}
+        <p>{{- $item.body | safeHTML -}}</p>
     </div>
+    {{ end }}
+    <button class="pd-AddToCart">Add to Cart</button>
+    <button class="pd-CustomizeProduct">Customize your products</button>
+
+    <div class="pd-Configurator">
+        <span>
+            <label for="windowdecals">Window Decals</label>
+            <input id="windowdecals" name="windowdecals" type="text">
+        </span>
+    </div>
+
     <script src="/js/product.js"></script>
 {{ end }}

@@ -1,10 +1,16 @@
 ---
 Title: COVID Basics
 Characteristics:
-- 1 20"x30" A-Sign
-- Weather & outdoors use resistant print
-- 1 40"x22" Window Decal
-- Heavy duty print
+-
+  body: <p>1 20"x30" A-Sign</p><p>Weather & outdoors use resistant print</p><p>1 40"x22" Window Decal</p><p>Heavy duty print</p>
+  title: A-Sign & Window Decal
+  price: $9,99
+- title: 3x Floor Stickers
+  price: $10,99
+  body: <p>3 12" Floor Stickers</p>
+- title: 2x Window Decals Bundle
+  price: $9,99
+  body: <p>2x 40"x22" Window Decals</p>
 Images:
 - /img/basic-a-sign.jpg
 - /img/basic-decal.jpg

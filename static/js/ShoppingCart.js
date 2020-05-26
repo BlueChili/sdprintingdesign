@@ -39,7 +39,7 @@ function emptyCartCallout () {
   const template = document.querySelector(`.co`)
     .content.cloneNode(true);
   document.body.appendChild(template);
-  ,l  setTimeout(() => {
+  setTimeout(() => {
     document.body.removeChild(document.querySelector(`.co-Overlay`));
   }, 3100);
   console.log('empty store');

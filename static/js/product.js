@@ -1,5 +1,4 @@
 const rootElement = document.querySelector(`html`);
-const featuredCards = document.querySelectorAll(".pc-featured");
 
 const imagesContainer = document.querySelector(".pd-ImgContainer");
 const thumbnails = document.querySelectorAll(".pd-Thumbnail");

@@ -1,0 +1,57 @@
+// Header Shopping Cart
+
+.hd-ShoppingCart {
+  margin: 0;
+  margin-left: 0.5em;
+  margin-top: -6px;
+  border: 1px solid white;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hd-ShoppingCart_Counter { 
+  display: none; 
+  color: white; 
+  font-size: 1em;
+  font-weight: 700;
+  margin-left: 6px;
+}
+.hd-ShoppingCart_CounterActive { display: block; }
+
+.hd-CartIcon { 
+  color: white; 
+  padding: 3px;
+  width: 30px;
+  margin-left: 2px;
+}
+
+.co-Overlay {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: callOut 3s forwards;
+}
+.co-Wrapper {
+  z-index: 2;
+  background: var(--primary-green);
+  max-width: 24em;
+  margin: 0 1em;
+  padding: 0 2em;
+}
+
+@keyframes callOut {
+  0% { opacity: 0;}
+  15% { opacity: 1;}
+  80% { opacity: 1;}
+  100% {opacity: 0;}
+}

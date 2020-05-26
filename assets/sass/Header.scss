@@ -1,12 +1,16 @@
 header {
-  height: 4em;
+  display: flex;
+  position: sticky;
+  top: 0;
+  // height: 4em;
+  padding: 0 0.5em;
   background: radial-gradient(circle, var(--primary-blue) 0%, #FFF 0%, #7FCCEA 0%, var(--primary-blue) 100%);
   box-shadow: 0 0 4px 0 rgba(19,19,19,0.89);
-  display: flex;
   align-items: center;
-  padding: 0 0.5em;
-  position: sticky;
+  padding-top: 0.8em;
+  padding-bottom: 0.4em;
+  z-index: 1;
 }
 header .mediaicon { height: 2em; width: 2em; }
 header .socialmedia { margin-left: auto; }
-header .logo { width: 10em;}
+header .logo { width: 8em; }

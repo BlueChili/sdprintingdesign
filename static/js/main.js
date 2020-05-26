@@ -5,7 +5,6 @@ mobileNav.addEventListener('click', (e) => {
   mobileLinks.classList.toggle('sb-visible');
 })
 
-const rootElement = document.querySelector(`html`);
 const featuredCards = document.querySelectorAll(".pc-featured");
 
 featuredCards.forEach((card) => {
@@ -18,10 +17,8 @@ featuredCards.forEach((card) => {
   });
   function toggleSlider (event) {
     event.preventDefault();
-    const windowWidth = rootElement.clientWidth;
     const index = event.target.dataset.index;
     const displacementBase = document.querySelector(`.pc-featured_Image`).getBoundingClientRect().width;
     imagesContainer.style.transform = `translate3d(-${index * displacementBase}px, 0 ,0)`;
   }
 });
-

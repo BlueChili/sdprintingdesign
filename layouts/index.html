@@ -1,52 +1,37 @@
 {{ define "main" }}
 
     {{ partial "SideNavbar.html" . }}
-
     <main class="pc-grid">
+        {{ range $product := where .Site.RegularPages "Section" "products" | first 3}}
         <section class="pc-featured">
             <div class="pc-featured_ImagesContainer">
-                <img class="pc-featured_Image" src="/img/sneezeguard1.png" alt="">
-                <img class="pc-featured_Image" src="/img/sneezeguard2.png" alt="">
+                {{ range $src := $product.Params.images }}
+                <img class="pc-featured_Image" src="{{ $src }}" alt="">
+                {{ end }}
             </div>
             <div class="pc-featured_ThumbnailContainer">
-                <a href=""><img class="pc-featured_Thumbnail" src="/img/sneezeguard1.png" alt="" data-index="0"></a>
-                <a href=""><img class="pc-featured_Thumbnail" src="/img/sneezeguard2.png" alt="" data-index="1"></a>
+                {{ range $index, $src := $product.Params.images }}
+                <a href=""><img class="pc-featured_Thumbnail" src="{{ $src }}" alt="" data-index="{{ $index }}"></a>
+                {{ end }}
             </div>
             <div class="pc-featured_Info">
-                <h2 class="pc-featured_Title">Protective Sneeze Guard</h2>
+                <h2 class="pc-featured_Title">{{ $product.Title }}</h2>
                 <p class="pc-featured_Description">Clear Acrylic Plexiglass 23" x 8", with a 3" apperture to service you customers in a safe way.</p>
                 <span class="pc-featured_Price">Starts at $9,99</span>
-                <a class="pc-featured_Cta" href="/products/covid-basics">Order Now</a>
+                <a class="pc-featured_Cta" href="{{ $product.Permalink }}">Order Now</a>
             </div>
         </section>
-        <section class="pc-featured">
-            <div class="pc-featured_ImagesContainer">
-                <img class="pc-featured_Image" src="/img/basic-a-sign.jpg" alt="">
-                <img class="pc-featured_Image" src="/img/basic-decal.jpg" alt="">
-                <img class="pc-featured_Image" src="/img/basic-floor-sticker.jpg" alt="">
-                <img class="pc-featured_Image" src="/img/basic-combo.jpg" alt="">
-            </div>
-            <div class="pc-featured_ThumbnailContainer">
-                <a href=""><img class="pc-featured_Thumbnail" src="/img/basic-a-sign.jpg" alt="" data-index="0"></a>
-                <a href=""><img class="pc-featured_Thumbnail" src="/img/basic-decal.jpg" alt="" data-index="1"></a>
-                <a href=""><img class="pc-featured_Thumbnail" src="/img/basic-floor-sticker.jpg" alt="" data-index="2"></a>
-                <a href=""><img class="pc-featured_Thumbnail" src="/img/basic-combo.jpg" alt="" data-index="3"></a>
-            </div>
-            <div class="pc-featured_Info">
-                <h2 class="pc-featured_Title">COVID Basics</h2>
-                <p class="pc-featured_Description">A complete Selection of products to protect your personel and your customers, while being able to do business as close to normal as possible</p>
-                <span class="pc-featured_Price">Starts at $9,99</span>
-                <a class="pc-featured_Cta" href="/products/covid-basics">Order Now</a>
-            </div>
-        </section>
-        {{range (seq 1 5) }}
+        {{ end }}
+        {{ range $product := where .Site.RegularPages "Section" "products" | after 3}}
             <section class="pc-standard">
-        <div class="pc-standard_ImageContainer"><img class="pc-standard_Image" src="/img/sneezeguard1.png" alt=""></div>
+                <div class="pc-standard_ImageContainer">
+                    <img class="pc-standard_Image" src="{{ index $product.Params.images 0 }}" alt="">
+                </div>
                 <div class="pc-standard_Info">
-                    <h2 class="pc-standard_Title">Protective Sneeze Guard</h2>
+                    <h2 class="pc-standard_Title">{{ $product.Title }}</h2>
                     <p class="pc-standard_Description">Protect your personel and customers using this product.</p>
                     <span class="pc-standard_Price">Starts at $9,99</span>
-                    <a class="pc-standard_Cta" href="/products/covid-basics">Order Now</a>
+                    <a class="pc-standard_Cta" href="{{ $product.Permalink }}">Order Now</a>
                 </div>
             </section>
         {{ end }} 

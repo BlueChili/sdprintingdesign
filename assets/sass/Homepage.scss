@@ -1,0 +1,163 @@
+/* Start of the product card component definition */
+/* Featured product variant */
+/* #!pdf */
+
+
+.pc-grid { 
+  display: flex; 
+  flex-wrap: wrap; 
+  // @media screen and ($mq-md) { align-items: start; }
+  @media screen and ($mq-lg) {
+    margin-top: 1.3em;
+    justify-content: center;
+  }
+}
+.pc-featured { 
+  flex-basis: 20rem; flex-grow: 1;
+  margin: 0 6px 3em;
+  border: 1px solid var(--primary-blue);
+  box-shadow: 0 0 3px 0 rgba(19,19,19,0.39);
+  overflow: hidden;
+  flex-grow: 1;
+  @media screen and ($mq-md) {
+    flex-basis: calc(46vw - 75px);
+  }
+  @media screen and ($mq-mmd) { 
+    flex-basis: 47vw;
+  }
+  @media screen and ($mq-lg) {
+    flex-basis: calc(32vw - 47px);
+    flex-grow: 1;
+  }
+  // margin: 0;
+}
+.pc-featured_Title {
+  color: var(--primary-blue);
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.5em;
+  margin: 0;
+  margin-top: 0.2em;
+  flex-basis: 100%
+}
+
+.pc-featured_Price { font-size: 0.9em; align-self: center; font-weight:600 ;}
+.pc-featured_ImagesContainer { 
+  display: flex; 
+  width: 98vw; 
+  height: 98vw; 
+  transition: transform 0.4s;
+  transition-timing-function: cubic-bezier(.82,.72,.32,.92);
+  @media screen and ($mq-md) {
+    width: calc(50vw - 75px);
+    height: calc(50vw - 75px);
+  }
+  @media screen and ($mq-mmd) {width: 100%; height: 49vw;}
+  @media screen and ($mq-lg) {
+    width: calc(35vw - 47px);
+    height: calc(35vw - 47px);
+  }
+}
+
+.pc-featured_Image { width: 100%; height: auto }
+
+.pc-featured_ThumbnailContainer { text-align: center; margin: 0.4em 0 0 0; z-index: 1;}
+.pc-featured_Thumbnail { width: 3em; height: 3em; }
+
+.pc-featured_Cta { 
+  font-size: 0.9em;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--primary-text);
+  background-color: var(--primary-blue); 
+  padding: 0.6em 1em; 
+  border: 0px;
+  margin-left: auto;
+}
+
+.pc-featured_Info {
+  padding: 0.4em 0.5em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pc-featured_Description {   
+  font-weight: 600;
+  font-size: 0.8em;
+  font-family: 'Nunito Sans';
+  margin-top: 0;
+  margin-bottom: 0.7em;
+}
+
+
+
+
+
+
+/* Start of the standard size product card for the home page */
+/* #!pds */
+
+.pc-standard { 
+  flex-basis: 20rem; flex-grow: 1;
+  margin: 0 6px 2em;
+  border: 1px solid var(--primary-blue);
+  box-shadow: 0 0 3px 0 rgba(19,19,19,0.39);
+  @media all and ($mq-mmd) {
+    flex-basis: 10rem; flex-grow: 1;
+  }
+  @media screen and ($mq-lg) {
+    flex-basis: 15rem; flex-grow: 1;
+    max-width: 35vw;
+  }
+}
+
+.pc-standard_Title {
+  color: var(--primary-blue);
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.5em;
+  margin: 0;
+  margin-top: 0.2em;
+  flex-basis: 100%;
+  @media all and ($mq-mmd) {
+    margin-bottom: 0.5em;
+  }
+}
+
+.pc-standard_Price { 
+  font-family: 'Nunito Sans'; font-size: 0.9em; font-weight:600 ;
+  align-self: center; 
+  @media all and ($mq-lg) {margin-left: auto; margin-bottom: 10px;}
+}
+.pc-standard_Image { width: 100%; height: auto}
+
+.pc-standard_Cta { 
+  font-size: 0.9em;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--primary-blue); 
+  padding: 0.6em 1em; 
+  border: 0px;
+  margin-left: auto;
+  @media all and ( $mq-mmd ) {
+    margin: 0;
+    margin-top: 0.5em;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.pc-standard_Info {
+  padding: 0.4em 0.5em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pc-standard_Description {   
+  font-weight: 600;
+  font-size: 0.8em;
+  font-family: 'Nunito Sans';
+  margin-top: 0;
+  margin-bottom: 0.7em;
+  @media all and ($mq-lg) { margin-bottom: 10px}
+}

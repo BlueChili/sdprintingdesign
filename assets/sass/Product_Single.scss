@@ -1,17 +1,39 @@
+.pd {
+  display: flex;
+  flex-wrap: wrap;
+  @media all and ($mq-mmd) {
+    flex-wrap: nowrap;
+  }
+}
+
 .pd-ImgSlider {
   overflow: hidden;
   margin: 2vw;
+  box-shadow: -1px -1px 3px 0 rgba(0,0,0,0.2),1px 1px 2px 0 rgba(0,0,0,0.3);
+  border: 1px solid var(--primary-blue);
+  border-radius: 2px;
+  align-self: start;
+  @media screen and ($mq-mmd) {
+    flex-basis: 42vw; flex-shrink: 0;
+  }
+  @media screen and ($mq-lg) {
+    margin-top: 1em;
+    flex-basis: 35vw; flex-shrink: 0;
+  }
 }
 
 .pd-ImgContainer {
   display: flex;
-  width: 98vw;
   height: 98vw;
-  border-radius: 3px;
-  border: 1px solid var(--primary-blue);
   transition: transform 0.33s;
   margin:0;
   transition-timing-function: cubic-bezier(.82,.72,.32,.92);
+    @media screen and ($mq-mmd) {
+    height: 42vw;
+  }
+  @media all and ($mq-lg) {
+    height: 35vw;
+  }
 }
 
 .pd-Img {
@@ -28,12 +50,24 @@
   height: 2em;
   width: 2em;
   margin-right: 10px;
+  cursor: pointer;
 }
 
+.pd-Content {
+  display: flex;
+  // flex-wrap: wrap;
+  flex-grow: 0;
+  // align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 .pd-Title { 
   color: var(--primary-blue);
   margin: 0 0 18px 18px;
   padding: 0;
+  @media screen and ($mq-mmd) {
+    margin-top: 1em;
+  }
 }
 
 .pd-Description {
@@ -55,6 +89,11 @@
   flex-wrap: wrap;
   div:last-child {
     margin-bottom: 0;
+  }
+  @media screen and ($mq-md) {
+    div:last-child {
+      margin-bottom: 0.8em;
+    }
   }
 }
 
@@ -81,7 +120,6 @@
     width: 8px;
     height: 8px;
     border-radius: 4px;
-    z-index: 2;
     background: rgb(255, 130, 130);
     will-change: transform;
     animation: slideup 0.4s forwards;
@@ -116,6 +154,12 @@
   padding: 0.5em 1em;
   margin-left: 1em;
   margin-bottom: 1em;
+  cursor: pointer;
+  @media all and ($mq-md) {
+    // margin-left: auto;
+    align-self: stretch;
+    margin-right: 1em;
+  }
 }
 
 .pd-CustomizeProduct {

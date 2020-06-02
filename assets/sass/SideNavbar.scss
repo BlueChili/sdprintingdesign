@@ -4,6 +4,7 @@
   padding-left: 1em;
   padding-top: 0.4em;
   width: 100vw;
+  z-index: 1;
   margin: 0;
   transition: transform 0.31s;
   transform: translate3d(-100%, 0, 0);
@@ -18,18 +19,24 @@
   }
   &.sb-visible {
     transform: translate3d(0,0,0);
+    @media all and ($mq-lg){
+      transform: translate3d(0,1em,0);
+    }
   }
-}
-
-@media all and (min-width: 600px) {
-  .sb {
-    transform: translate3d(0,0,0);
-    width: 200px;
+  @media all and ($mq-md) {
+    width: 150px;
+  }
+  @media all and ($mq-mmd) {
+    width: 140px;
+    font-size: 0.8em;
+  }
+  @media all and ($mq-lg){
+    transform: translate3d(0,1em,0);
     position: relative;
-    // display: inline-block;
     float: left;
   }
 }
+
 
 .sb-Product {
   color: white;

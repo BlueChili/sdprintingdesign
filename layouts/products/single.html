@@ -1,46 +1,49 @@
 {{ define "main" }}
 
-    {{ partial "SideNavbar.html" }}
-
-    <div class="pd-ImgSlider">
-        <div class="pd-ImgContainer">
-            {{ range $url := .Params.Images }}
-            <img class="pd-Img" src="{{ $url }}" alt="">
-            {{ end }}
+    {{ partial "SideNavbar.html" . }}
+    <main class="pd">
+        <div class="pd-ImgSlider">
+            <div class="pd-ImgContainer">
+                {{ range $url := .Params.Images }}
+                <img class="pd-Img" src="{{ $url }}" alt="">
+                {{ end }}
+            </div>
+            <div class="pd-ThumbContainer">
+                {{ range $index, $url := .Params.Images }}
+                <img class="pd-Thumbnail" src="{{- $url -}}" alt="" data-index="{{- $index -}}">
+                {{ end }}
+            </div>
         </div>
-        <div class="pd-ThumbContainer">
-            {{ range $index, $url := .Params.Images }}
-            <img class="pd-Thumbnail" src="{{- $url -}}" alt="" data-index="{{- $index -}}">
+        <section class="pd-Content">
+            <h1 class="pd-Title">{{- .Title -}}</h1>
+            <div class="pd-Description">
+                <p>A complete Selection of products to protect your personel and your customers, while being able to do business as close to normal as possible</p>
+            </div>
+            <div class="pd-PreConfContainer">
+            {{ range $index, $item := .Params.preconfig }}
+            <div class="pd-PreConfig {{ if eq $index 0}}pd-PreConfig_Active{{ end }}" data-preconfig="{{- $index -}}">
+                <p class="pd-PreConfig_Title" data-preconfig="{{- $index -}}">{{ $item.title }}</p>
+                <p class="pd-PreConfig_Price" data-preconfig="{{- $index -}}">${{ $item.price }}</p>
+            </div>
             {{ end }}
-        </div>
-    </div>
-    <h1 class="pd-Title">{{- .Title -}}</h1>
-    <div class="pd-Description">
-        <p>A complete Selection of products to protect your personel and your customers, while being able to do business as close to normal as possible</p>
-    </div>
-    <div class="pd-PreConfContainer">
-    {{ range $index, $item := .Params.Characteristics }}
-    <div class="pd-PreConfig {{ if eq $index 0}}pd-PreConfig_Active{{ end }}" data-preconfig="{{- $index -}}">
-        <p class="pd-PreConfig_Title" data-preconfig="{{- $index -}}">{{ $item.title }}</p>
-        <p class="pd-PreConfig_Price" data-preconfig="{{- $index -}}">{{ $item.price }}</p>
-    </div>
-    {{ end }}
-    </div>
-    {{ range $index, $item := .Params.Characteristics }}
-    <div class="pd-PreConfigDetails {{ if eq $index 0}}pd-PreConfigDetails_Active{{ end }}" data-conf="{{- $index -}}">
-        <h3>Configuration Characteristics</h3>
-        <p>{{- $item.body | safeHTML -}}</p>
-    </div>
-    {{ end }}
-    <button class="pd-AddToCart">Add to Cart</button>
-    <button class="pd-CustomizeProduct">Customize your products</button>
+            </div>
+            {{ range $index, $item := .Params.preconfig }}
+            <div class="pd-PreConfigDetails {{ if eq $index 0}}pd-PreConfigDetails_Active{{ end }}" data-conf="{{- $index -}}">
+                <h3>Configuration Characteristics</h3>
+                <p>{{- $item.body | safeHTML -}}</p>
+            </div>
+            {{ end }}
+            <button class="pd-AddToCart">Add to Cart</button>
+        </section>
+    </main>
+    <!-- <button class="pd&#45;CustomizeProduct">Customize your products</button> -->
 
-    <div class="pd-Configurator">
-        <span>
-            <label for="windowdecals">Window Decals</label>
-            <input id="windowdecals" name="windowdecals" type="text">
-        </span>
-    </div>
+    <!-- <div class="pd&#45;Configurator"> -->
+    <!--     <span> -->
+    <!--         <label for="windowdecals">Window Decals</label> -->
+    <!--         <input id="windowdecals" name="windowdecals" type="text"> -->
+    <!--     </span> -->
+    <!-- </div> -->
 
     <script src="/js/product.js"></script>
 {{ end }}

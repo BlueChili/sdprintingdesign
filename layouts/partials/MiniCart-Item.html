@@ -1,0 +1,15 @@
+<template class="MiniCart-Item">
+    <section class="mc-Item">
+        <img class="mc-ItemImage" src="" alt="">
+        <section class="mc-ItemInfo">
+            <h3 class="mc-ItemTitle"></h3>
+            <p class="mc-ItemOptions"></p>
+            <section class="mc-ItemQuantity">
+                <button onclick="mcQuantityDecrease(event)" class="mc-ItemQuantity_Minus" type="button">-</button>
+                <span class="mc-ItemQuantity_Amount"></span>
+                <button onclick="mcQuantityIncrease(event)" class="mc-ItemQuantity_Plus" type="button">+</button>
+            </section>
+            <span class="mc-ItemPrice"></span>
+        </section>
+    </section>
+</template>

@@ -1,2 +1,10 @@
 languageCode = "en-us"
 title = "SD Printing & Design Inc. NY"
+# [outputFormats]
+#   [outputFormats.json]
+#     mediaType = "application/json"
+#     basename = "data"
+[outputs]
+  page = ["html", "json"]
+  section = ["html", "json"]
+  home = ["html"]

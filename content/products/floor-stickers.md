@@ -1,6 +1,6 @@
 ---
 Title: Floor Stickers
-ProductId: floor-stickers
+productid: floor-stickers
 preconfig:
 -
   title: Rounded Floor Sticker

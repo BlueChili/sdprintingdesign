@@ -1,6 +1,6 @@
 ---
 Title: COVID Basics
-ProductId: covid-basics
+productid: covid-basics
 preconfig:
 -
   body: <p>1 20"x30" A-Sign</p><p>Weather & outdoors use resistant print</p><p>1 40"x22" Window Decal</p><p>Heavy duty print</p>

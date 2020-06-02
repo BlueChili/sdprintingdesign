@@ -3,7 +3,7 @@
 {{ range $index, $e := .Site.RegularPages }}
 {{ if $index }}, {{ end }} {
   "title": "{{ index $e.Params.preconfig 0 "title" }}",
-  "productid": "{{ $e.Params.ProductId }}",
+  "productid": "{{ $e.Params.productid }}",
   "price": "{{ index $e.Params.preconfig 0 "price" }}",
   "images": {{ $e.Params.images}}
 }

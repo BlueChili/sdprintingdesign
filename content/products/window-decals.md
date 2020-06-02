@@ -1,6 +1,6 @@
 ---
 Title: Window Decals
-ProductId: window-decals
+productid: window-decals
 preconfig:
 -
   body: <p>1 40"x22" Window Decal</p><p>Heavy duty print</p>

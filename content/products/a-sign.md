@@ -1,6 +1,6 @@
 ---
 Title: A Sign
-ProductId: a-sign
+productid: a-sign
 preconfig:
 -
   body: <p>1 20"x30" A-Sign</p><p>Weather & outdoors use resistant print</p><p>Heavy duty print</p>

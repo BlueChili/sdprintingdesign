@@ -1,6 +1,6 @@
 ---
 Title: Sneeze Guard
-ProductId: sneeze-guard
+productid: sneeze-guard
 preconfig:
 -
   body: <p>Acrylic protection barrier ensueres both your personel and customers safety</p>

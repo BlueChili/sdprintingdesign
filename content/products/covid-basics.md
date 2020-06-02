@@ -4,7 +4,7 @@ ProductId: covid-basics
 preconfig:
 -
   body: <p>1 20"x30" A-Sign</p><p>Weather & outdoors use resistant print</p><p>1 40"x22" Window Decal</p><p>Heavy duty print</p>
-  title: A-Sign & Window Decal
+  title: A-Sign and Window Decal
   price: 9.99
 - title: 3x Floor Stickers
   price: 10.99

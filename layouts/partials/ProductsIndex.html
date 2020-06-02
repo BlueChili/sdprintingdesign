@@ -1,0 +1,12 @@
+<script type="application/json" class="ProductsIndex">
+[
+{{ range $index, $e := .Site.RegularPages }}
+{{ if $index }}, {{ end }} {
+  "title": "{{ index $e.Params.preconfig 0 "title" }}",
+  "productid": "{{ $e.Params.ProductId }}",
+  "price": "{{ index $e.Params.preconfig 0 "price" }}",
+  "images": {{ $e.Params.images}}
+}
+{{ end }}
+]
+</script>

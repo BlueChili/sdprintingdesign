@@ -1,9 +1,9 @@
 const cart = document.querySelector(`.hd-ShoppingCart`);
 const cartCounter = document.querySelector(`.hd-ShoppingCart_Counter`);
-let products;
+let products = JSON.parse(document.querySelector(`[type="application/json"].ProductsIndex`).textContent);
 
-fetch(`/products/index.json`)
-  .then(res => res.json()).then(data => products = data);
+// fetch(`/products/index.json`)
+  // .then(res => res.json()).then(data => products = data);
 
 localforage.length().then((n) => {
   if (n > 0) {

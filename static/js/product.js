@@ -34,7 +34,7 @@ confToggles.forEach((el) => {
 });
 
 const productConfigurations = function(){
-  const textData = document.querySelector(`[type="application/json"]`);
+  const textData = document.querySelector(`[type="application/json"].ProductConfigurations`);
   return JSON.parse(textData.textContent);
 }();
 

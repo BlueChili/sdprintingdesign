@@ -161,3 +161,21 @@
   margin-bottom: 0.7em;
   @media all and ($mq-lg) { margin-bottom: 10px}
 }
+
+
+.ec-minicart__icon .icon-default path[stroke] {
+  stroke: #FFFFFF !important;
+}
+.ec-minicart__icon .icon-default circle[stroke] {
+  stroke: #fff !important;
+}
+
+.ec-minicart__icon .icon-default circle[fill] {
+  fill: #fff !important;
+}
+
+.ec-cart-widget {
+  border: 1px solid white;
+  margin-left: 4px;
+  margin-top: -5px;
+}

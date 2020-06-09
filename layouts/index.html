@@ -2,40 +2,9 @@
 
     {{ partial "SideNavbar.html" . }}
     <main class="pc-grid">
-        {{ range $product := where .Site.RegularPages "Section" "products" | first 3}}
-        <section class="pc-featured">
-            <div class="pc-featured_ImagesContainer">
-                {{ range $src := $product.Params.images }}
-                <img class="pc-featured_Image" src="{{ $src }}" alt="">
-                {{ end }}
-            </div>
-            <div class="pc-featured_ThumbnailContainer">
-                {{ range $index, $src := $product.Params.images }}
-                <a href=""><img class="pc-featured_Thumbnail" src="{{ $src }}" alt="" data-index="{{ $index }}"></a>
-                {{ end }}
-            </div>
-            <div class="pc-featured_Info">
-                <h2 class="pc-featured_Title">{{ $product.Title }}</h2>
-                <p class="pc-featured_Description">Clear Acrylic Plexiglass 23" x 8", with a 3" apperture to service you customers in a safe way.</p>
-                <span class="pc-featured_Price">Starts at $9,99</span>
-                <a class="pc-featured_Cta" href="{{ $product.Permalink }}">Order Now</a>
-            </div>
-        </section>
-        {{ end }}
-        {{ range $product := where .Site.RegularPages "Section" "products" | after 3}}
-            <section class="pc-standard">
-                <div class="pc-standard_ImageContainer">
-                    <img class="pc-standard_Image" src="{{ index $product.Params.images 0 }}" alt="">
-                </div>
-                <div class="pc-standard_Info">
-                    <h2 class="pc-standard_Title">{{ $product.Title }}</h2>
-                    <p class="pc-standard_Description">Protect your personel and customers using this product.</p>
-                    <span class="pc-standard_Price">Starts at $9,99</span>
-                    <a class="pc-standard_Cta" href="{{ $product.Permalink }}">Order Now</a>
-                </div>
-            </section>
-        {{ end }} 
+        <div id="my-store-30988390"></div>
+<div>
+<script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?30988390&data_platform=code&data_date=2020-06-03" charset="utf-8"></script><script type="text/javascript"> xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-30988390");</script>
+</div>
     </main>
-      <!-- Blocks may include default content. -->
-      <!-- Blocks may include default content. -->
 {{ end }}

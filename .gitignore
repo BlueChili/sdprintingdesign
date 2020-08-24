@@ -3,3 +3,8 @@ public
 Session.vim
 notes.md
 TODO.md
+
+# Local Netlify folder
+.netlify
+secrets
+node_modules

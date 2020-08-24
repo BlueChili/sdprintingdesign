@@ -1,0 +1,73 @@
+{{ range $optindex, $option := .Params.options }}
+{{ if ne $option.name "Color" }}
+
+    {{ if eq $option.type "SELECT" }}
+    <div class="pd-SelectInput">
+        <p class="title">{{ $option.name }}:</p>
+        <select class="field" id="{{ $option.name }}">
+            {{ range $option.choices }}
+            <option value="{{ .text }}">
+            {{ .text}} {{ $option.name }} {{ if gt .priceModifier 0 }}${{.priceModifier}}{{ end }}
+            </option>
+            {{ end }}
+        </select>
+    </div>
+    {{ end }}
+
+    {{ if eq $option.type "SIZE" }}
+    <div class="pd-SizeInput">
+        <p class="title">Size:</p>
+        {{ range $option.choices }}
+            <button class="sizeButton" type="button">{{ .text }}</button>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    {{ if eq $option.type "RADIO" }}
+    <div class="pd-RadioInput">
+        <p class="title">{{ $option.name }}</p>
+        {{ range $option.choices }}
+            <input class="field" type="radio" id="{{$option.name}}{{.text}}" name="{{$option.name}}">
+            <label class="label" for="{{$option.name}}{{.text}}">{{ .text }}</label>
+        {{ end }}
+    </div>
+    {{ end }}
+
+
+    {{ if eq $option.name "Width" }}
+    <div class="pd-TextInput">
+        <input class="field" type="text" id="{{$option.name}}"required>
+        <label class="label" for="{{$option.name}}">{{ $option.name }}</label>
+    </div>
+    {{ else if eq $option.name "Height" }}
+    <div class="pd-TextInput">
+        <input class="field" type="text" id="{{$option.name}}" required>
+        <label class="label" for="{{$option.name}}">{{ $option.name }}</label>
+    </div>
+    {{ else if eq $option.type "TEXTFIELD" }}
+    <div class="pd-TextInput">
+        <input class="field" type="text" id="{{$option.name}}">
+        <label class="label" for="{{$option.name}}">{{ $option.name }}</label>
+    </div>
+    {{ end }}
+
+    {{ if eq $option.type "CHECKBOX" }}
+    <div class="pd-CheckInput">
+        <p class="title">{{ $option.name }}</p>
+        {{ range $option.choices }}
+            <input class="field" type="checkbox" id="{{ .text }}">
+            <label class="label" for="{{.text}}">{{ .text }}</label>
+        {{ end }}
+    </div>
+    {{ end }}
+
+
+    {{ if eq $option.type "FILES" }}
+       <div class="pd-FileInput">
+           <label class="label" for="{{$option.name}}">Upload your design:</label>
+           <input class="field" type="file" placeholder="{{$option.name}}" id="{{$option.name}}">
+       </div>
+    {{ end }}
+
+{{ end }}
+{{ end }}

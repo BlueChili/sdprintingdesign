@@ -16,17 +16,17 @@ function toggleSlider (event) {
   imagesContainer.style.transform = `translate3d(-${index * displacementBase}px, 0 ,0)`;
 }
 
-const confToggles = document.querySelectorAll(`.pd-PreConfig`);
-const configs = document.querySelectorAll(`.pd-PreConfigDetails`);
+const confToggles = document.querySelectorAll(`.pd-Variation`);
+const configs = document.querySelectorAll(`.pd-VariationDetails`);
 
 function toggler(e) {
   const index = e.target.dataset.preconfig;
-  document.querySelector(".pd-PreConfig_Active").classList.toggle(`pd-PreConfig_Active`);
+  document.querySelector(".pd-Variation_Active").classList.toggle(`pd-Variation_Active`);
   confToggles.forEach(function(el) {
-    el.dataset.preconfig == index && el.classList.toggle(`pd-PreConfig_Active`)
+    el.dataset.preconfig == index && el.classList.toggle(`pd-Variation_Active`)
   });
-  document.querySelector(".pd-PreConfigDetails_Active").classList.toggle(`pd-PreConfigDetails_Active`);
-  document.querySelector(`[data-conf="${index}"]`).classList.toggle(`pd-PreConfigDetails_Active`);
+  document.querySelector(".pd-VariationDetails_Active").classList.toggle(`pd-VariationDetails_Active`);
+  document.querySelector(`[data-conf="${index}"]`).classList.toggle(`pd-VariationDetails_Active`);
 }
 
 confToggles.forEach((el) => {
@@ -43,13 +43,13 @@ const productConfigurations = function(){
 document.querySelector(`.pd-AddToCart`).addEventListener('click', e => {
   const data  = productConfigurations.preconfig.length == 1 
     ? productConfigurations.preconfig[0]
-    : findPreConfig();
+    : findVariation();
   data.quantity = 1;
   data.productid = productConfigurations.productid;
   insertItem(data.title ,data);
 
-  function findPreConfig(){
-    const configs = document.querySelectorAll(`.pd-PreConfig`);
+  function findVariation(){
+    const configs = document.querySelectorAll(`.pd-Variation`);
     const index = Array.prototype.filter.call(configs, e => e.classList.length == 2);
     return  productConfigurations.preconfig[index[0].dataset.preconfig];
   }

@@ -2,9 +2,9 @@
 [
 {{ range $index, $e := .Site.RegularPages }}
 {{ if $index }}, {{ end }} {
-  "title": "{{ index $e.Params.preconfig 0 "title" }}",
+  "title": "{{ index $e.Params 0 "name" }}",
   "productid": "{{ $e.Params.productid }}",
-  "price": "{{ index $e.Params.preconfig 0 "price" }}",
+  "price": "{{ index $e.Params 0 "price" }}",
   "images": {{ $e.Params.images}}
 }
 {{ end }}

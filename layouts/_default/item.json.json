@@ -1,6 +1,0 @@
-{
-  "title": "{{ index .Params.preconfig 0 "title" }}",
-  "productid": "{{ .Params.ProductId }}",
-  "price": "{{ index .Params.preconfig 0 "price" }}",
-  "images": {{ .Params.images | jsonify }}
-}

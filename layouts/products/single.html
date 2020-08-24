@@ -1,34 +1,40 @@
+{{ define "scripts" }}
+{{ $component := resources.Get "scripts/product.jsx" | js.Build (dict "targetPath" "producto.js" "defines" (dict "process.env.NODE_ENV" `"development"`) "format" "cjs") | resources.Fingerprint }}
+    <script src="{{ $component.Permalink }}"></script>
+{{ end }}
+
 {{ define "main" }}
 
     {{ partial "SideNavbar.html" . }}
     <main class="pd">
         <div class="pd-ImgSlider">
             <div class="pd-ImgContainer">
-                {{ range $url := .Params.Images }}
-                <img class="pd-Img" src="{{ $url }}" alt="">
+                {{ range $url := .Params.Media.Images }}
+                <img class="pd-Img" src="{{ $url.imageOriginalUrl }}" alt="" style="object-fit: cover">
                 {{ end }}
             </div>
             <div class="pd-ThumbContainer">
-                {{ range $index, $url := .Params.Images }}
-                <img class="pd-Thumbnail" src="{{- $url -}}" alt="" data-index="{{- $index -}}">
+                {{ range $index, $url := .Params.Media.Images }}
+                <img class="pd-Thumbnail" src="{{- $url.image160pxUrl -}}" alt="" data-index="{{- $index -}}">
                 {{ end }}
             </div>
         </div>
-        <section class="pd-Content">
-            <h1 class="pd-Title">{{- .Title -}}</h1>
+        <section class="pd-Content" id="product">
+            <h1 class="pd-Title">{{- .Params.name -}}</h1>
             <div class="pd-Description">
-                <p>A complete Selection of products to protect your personel and your customers, while being able to do business as close to normal as possible</p>
+                <p>{{ safeHTML .Params.description }}</p>
             </div>
-            <div class="pd-PreConfContainer">
+            {{ partial "optionsrender.html" . }}
+            <div class="pd-VariationContainer">
             {{ range $index, $item := .Params.preconfig }}
-            <div class="pd-PreConfig {{ if eq $index 0}}pd-PreConfig_Active{{ end }}" data-preconfig="{{- $index -}}">
-                <p class="pd-PreConfig_Title" data-preconfig="{{- $index -}}">{{ $item.title }}</p>
-                <p class="pd-PreConfig_Price" data-preconfig="{{- $index -}}">${{ $item.price }}</p>
+            <div class="pd-Variation {{ if eq $index 0}}pd-Variation_Active{{ end }}" data-preconfig="{{- $index -}}">
+                <p class="pd-Variation_Title" data-preconfig="{{- $index -}}">{{ $item.title }}</p>
+                <p class="pd-Variation_Price" data-preconfig="{{- $index -}}">${{ $item.price }}</p>
             </div>
             {{ end }}
             </div>
             {{ range $index, $item := .Params.preconfig }}
-            <div class="pd-PreConfigDetails {{ if eq $index 0}}pd-PreConfigDetails_Active{{ end }}" data-conf="{{- $index -}}">
+            <div class="pd-VariationDetails {{ if eq $index 0}}pd-VariationDetails_Active{{ end }}" data-conf="{{- $index -}}">
                 <h3>Configuration Characteristics</h3>
                 <p>{{- $item.body | safeHTML -}}</p>
             </div>

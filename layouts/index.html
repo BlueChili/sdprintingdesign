@@ -5,18 +5,18 @@
         {{ range $product := where .Site.RegularPages "Section" "products" | first 3}}
         <section class="pc-featured">
             <div class="pc-featured_ImagesContainer">
-                {{ range $src := $product.Params.images }}
-                <img class="pc-featured_Image" src="{{ $src }}" alt="">
+                {{ range $src := $product.Params.media.images }}
+                <img class="pc-featured_Image" src="{{ $src.imageOriginalUrl }}" alt=""  style="object-fit: cover;">
                 {{ end }}
             </div>
             <div class="pc-featured_ThumbnailContainer">
-                {{ range $index, $src := $product.Params.images }}
-                <a href=""><img class="pc-featured_Thumbnail" src="{{ $src }}" alt="" data-index="{{ $index }}"></a>
+                {{ range $index, $src := $product.Params.media.images }}
+                <a href=""><img class="pc-featured_Thumbnail" src="{{ $src.image160pxUrl }}" alt="" data-index="{{ $index }}"></a>
                 {{ end }}
             </div>
             <div class="pc-featured_Info">
-                <h2 class="pc-featured_Title">{{ $product.Title }}</h2>
-                <p class="pc-featured_Description">Clear Acrylic Plexiglass 23" x 8", with a 3" apperture to service you customers in a safe way.</p>
+                <a href="{{$product.Permalink}}"><h2 class="pc-featured_Title">{{ $product.Params.name }}</h2></a>
+                <section class="pc-featured_Description">{{ safeHTML $product.Params.description }}</section>
                 <span class="pc-featured_Price">Starts at $9,99</span>
                 <a class="pc-featured_Cta" href="{{ $product.Permalink }}">Order Now</a>
             </div>
@@ -25,17 +25,15 @@
         {{ range $product := where .Site.RegularPages "Section" "products" | after 3}}
             <section class="pc-standard">
                 <div class="pc-standard_ImageContainer">
-                    <img class="pc-standard_Image" src="{{ index $product.Params.images 0 }}" alt="">
+                    <img class="pc-standard_Image" src="{{ $product.Params.imageOriginalUrl }}" alt="">
                 </div>
                 <div class="pc-standard_Info">
-                    <h2 class="pc-standard_Title">{{ $product.Title }}</h2>
-                    <p class="pc-standard_Description">Protect your personel and customers using this product.</p>
+                    <h2 class="pc-standard_Title">{{ $product.Params.name }}</h2>
+                    <section class="pc-featured_Description">{{ safeHTML $product.Params.description }}</section>
                     <span class="pc-standard_Price">Starts at $9,99</span>
                     <a class="pc-standard_Cta" href="{{ $product.Permalink }}">Order Now</a>
                 </div>
             </section>
         {{ end }} 
     </main>
-      <!-- Blocks may include default content. -->
-      <!-- Blocks may include default content. -->
 {{ end }}

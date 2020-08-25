@@ -54,10 +54,12 @@ function QuantitySelector (props) {
 }
 
 function QuantityInput (props) {
+  console.log(  props )
+  const message = !!props.qty.min ? `Minimum ${props.qty.min} units` : `Quantity`;
   return (
       <div className="pd-TextInput" >
         <input value={props.qty.value} type="number" min={props.qty.min} className="field" id="qtyInput"  onChange={props.qty.handleInput} />
-        <label htmlFor="qtyInput" className="label">Minimum 12 Units</label>
+        <label htmlFor="qtyInput" className="label">{message}</label>
       </div>
   )
 }
@@ -234,7 +236,7 @@ class App extends React.Component {
         <Description description={this.state.description} />
         <ProductOptions options={this.state.options} qty={qty} qtyOthers={this.state.qtyOthers}/>
         <Colors combinations={this.state.combinations} activeColor={this.state.activeColor} colorPick={this.colorPick}/>
-        { !!this.state.minimumunits == true && <QuantityInput qty={qty} /> }
+        { !!this.state.minimumunits == false && <QuantityInput qty={qty} /> }
         <Price product={this.state} />
         <button className="pd-AddToCart" onClick={this.addToCart} >Add to Cart</button>
       </div>

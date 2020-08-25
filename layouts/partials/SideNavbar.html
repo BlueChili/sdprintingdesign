@@ -2,22 +2,9 @@
     <ul>
     {{ range where $.Site.RegularPages "Section" "products" }}
         <li>
-            <a class="sb-Product" href="{{ .URL }}">{{ .Title }}</a>
+            <a class="sb-Product" href="{{ .RelPermalink }}">{{ .Params.name }}</a>
         </li>
     {{ end }}
-
-        <li><a class="sb-Product" href="">Truck Lettering</a></li>
-        <li><a class="sb-Product" href="">Silkscreen</a></li>
-        <li><a class="sb-Product" href="">Channel Lettering</a></li>
-        <li><a class="sb-Product" href="">Business Cards</a></li>
-        <li><a class="sb-Product" href="">more links</a></li>
-        <li><a class="sb-Product" href="">more links</a></li>
-        <li><a class="sb-Product" href="">more links</a></li>
-        <li><a class="sb-Product" href="">more links</a></li>
-        <li><a class="sb-Product" href="">more links</a></li>
-        <li><a class="sb-Product" href="">more links</a></li>
-        <li><a class="sb-Product" href="">more links</a></li>
-        <li><a class="sb-Product" href="">more links</a></li>
    </ul>
 </section>
 

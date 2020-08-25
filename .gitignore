@@ -8,3 +8,6 @@ TODO.md
 .netlify
 secrets
 node_modules
+
+#ignore the CTAGS file
+tags

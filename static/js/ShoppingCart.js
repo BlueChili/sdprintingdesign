@@ -1,6 +1,6 @@
 const cart = document.querySelector(`.hd-ShoppingCart`);
 const cartCounter = document.querySelector(`.hd-ShoppingCart_Counter`);
-let products = JSON.parse(document.querySelector(`[type="application/json"].ProductsIndex`).textContent);
+// let products = JSON.parse(document.querySelector(`[type="application/json"].ProductsIndex`).textContent);
 
 // fetch(`/products/index.json`)
   // .then(res => res.json()).then(data => products = data);
@@ -26,7 +26,7 @@ function cartUpdateCounter() {
     (function(){
       let items = 0;
       localforage.iterate(function(item){
-        items += item.quantity;
+        items ++;
       }).then(result => counter.textContent = items.toString() )
     }());
   });

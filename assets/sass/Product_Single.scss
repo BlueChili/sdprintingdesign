@@ -146,6 +146,12 @@
   }
 }
 
+.pd-Price {
+  margin-right: 1em;
+  width: 100%;
+  text-align: right;
+}
+
 .pd-AddToCart {
   border: 0;
   background: var(--primary-blue);
@@ -154,7 +160,9 @@
   color: var(--primary-text);
   padding: 0.5em 1em;
   margin-left: 1em;
+  margin-right: 1em;
   margin-bottom: 1em;
+  width: #{'Calc(100% - 2em)'};
   cursor: pointer;
   @media all and ($mq-md) {
     // margin-left: auto;
@@ -324,7 +332,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, Min(9em, 100%));
   grid-gap: 1em;
-  justify-content: space-between;
+  justify-content: space-around;
+  max-height: 14em;
+  overflow: scroll;
   section:last-child {
     margin-bottom: 0;
   }
@@ -339,7 +349,8 @@
   padding: 0.3em;
   border-radius: 2px;
   will-change: box-shadow;
-  transition: box-shadow 0.333s;
+  transition: box-shadow 0.333s, background 0.333s;
+  background: white;
   &:hover {
     box-shadow: 0 2px 3px 0 rgba(255,130,130,0.66);
   }
@@ -352,6 +363,7 @@
 .pd-Color_Active{
   position: relative;
   box-shadow: 0 2px 3px 0 rgba(255,130,130,0.66);
+  background: rgba(0, 239, 189, 0.5);
   &::after {
     content: '';
     position: absolute;

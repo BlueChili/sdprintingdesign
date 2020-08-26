@@ -10,6 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;0,600;0,700;0,900;1,200;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"> 
     <script src="/js/localforage.js"></script>
+    <script type="application/javascript">
+            function currencyFormatter(number){
+              const isFloat = /\./; const twoDigitFloat = /\d*\.\d\d+/;
+              if (isFloat.test(number)) { return twoDigitFloat.test(number) ? truncateToCurrency(number) : `${number}0`;
+              } else { return `${number}.00`; } }
+
+            function truncateToCurrency (number) { const regex = /\d*\.?\d?\d?/; return String(number).match(regex)[0]; }
+    </script>
     {{ block "productmetadata" . }}
     {{ end }}
   </head>

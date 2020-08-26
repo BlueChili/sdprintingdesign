@@ -22,10 +22,3 @@ featuredCards.forEach((card) => {
     imagesContainer.style.transform = `translate3d(-${index * displacementBase}px, 0 ,0)`;
   }
 });
-
-function currencyFormatter(number){
-  const isFloat = /\./; const twoDigitFloat = /\d*\.\d\d+/;
-  if (isFloat.test(number)) { return twoDigitFloat.test(number) ? truncateToCurrency(number) : `${number}0`;
-  } else { return `${number}.00`; } }
-
-function truncateToCurrency (number) { const regex = /\d*\.?\d?\d?/; return String(number).match(regex)[0]; }

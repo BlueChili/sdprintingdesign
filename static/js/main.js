@@ -22,3 +22,23 @@ featuredCards.forEach((card) => {
     imagesContainer.style.transform = `translate3d(-${index * displacementBase}px, 0 ,0)`;
   }
 });
+
+
+
+const caroussel = document.querySelectorAll(".pc-caroussel");
+
+caroussel.forEach((card) => {
+  const imagesContainer = card.querySelector(".pc-caroussel_ImagesContainer");
+  const thumbnails = card.querySelectorAll(".pc-caroussel_Control");
+  thumbnails.forEach((el, index) => {
+    el.addEventListener(`click`, (e) => {
+      toggleSlider(e);
+    });
+  });
+  function toggleSlider (event) {
+    event.preventDefault();
+    const index = event.target.dataset.index;
+    const displacementBase = document.querySelector(`.pc-caroussel_Image`).getBoundingClientRect().width;
+    imagesContainer.style.transform = `translate3d(-${index * displacementBase}px, 0 ,0)`;
+  }
+});

@@ -1,6 +1,24 @@
 {{ define "main" }}
 
     {{ partial "SideNavbar.html" . }}
+    <section class="pc-caroussel">
+        <div class="pc-caroussel_ImagesContainer">
+            <img class="pc-caroussel_Image" src="/img/caroussel/vehicle-wrapping.JPG" alt="">
+            <img class="pc-caroussel_Image" src="/img/caroussel/channel-lettering.jpg" alt="">
+            <img class="pc-caroussel_Image" src="/img/caroussel/vinyl-sign.jpg" alt="">
+            <img class="pc-caroussel_Image" src="/img/caroussel/truck-lettering.jpg" alt="">
+            <img class="pc-caroussel_Image" src="/img/caroussel/lightbox-sticker.jpg" alt="">
+            <img class="pc-caroussel_Image" src="/img/caroussel/out-sticker.jpg" alt="">
+        </div>
+        <div class="pc-caroussel_Controls">
+            <button class="pc-caroussel_Control" type="button" data-index="0"></button>
+            <button class="pc-caroussel_Control" type="button" data-index="1"></button>
+            <button class="pc-caroussel_Control" type="button" data-index="2"></button>
+            <button class="pc-caroussel_Control" type="button" data-index="3"></button>
+            <button class="pc-caroussel_Control" type="button" data-index="4"></button>
+            <button class="pc-caroussel_Control" type="button" data-index="5"></button>
+        </div>
+    </section>
     <main class="pc-grid">
         {{ range $product := where .Site.RegularPages "Section" "products" | first 3}}
         <section class="pc-featured">

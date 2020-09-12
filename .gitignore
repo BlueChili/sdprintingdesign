@@ -12,4 +12,4 @@ node_modules
 #ignore the CTAGS file
 tags
 
-content/products
+content/products/*.html

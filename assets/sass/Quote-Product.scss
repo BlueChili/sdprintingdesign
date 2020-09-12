@@ -1,0 +1,207 @@
+.qp{
+  margin: 0;
+  @media ($mq-lg) {
+    margin-left: 160px;
+  }
+  display: flex;
+  flex-flow: column;
+  @media ($mq-mmd){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "images bodytext"
+      "contact contact";
+    margin-top: 2em;
+  }
+  @media ($mq-lg) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "images bodytext contact";
+    grid-template-rows: 1fr;
+    min-height: calc(100vh - 226px);
+  }
+  grid-gap: 1em;
+}
+
+.qp-Title {
+  color: var(--primary-blue);
+  font-size: 2em;
+  margin-top: 0;
+}
+
+.qp-ImageSlider {
+  grid-area: images;
+  overflow: hidden;
+  width: 100%;
+  height: calc(50vw + 4em);
+  margin-bottom: 1em;
+  order: 0;
+  @media ($mq-mmd) {
+    height: calc(35vw + 3em);
+  }
+  @media ($mq-lg) {
+    height: calc(25vw + 3em);
+  }
+  border: 1px solid var(--swatch1);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.qp-Images_Container {
+  display: flex;
+  // width: #{'calc(100vw - 160px)'};
+  width: 100%;
+  height: 50vw;
+  flex-flow: row nowrap;
+  transition: transform 0.333s ease-in;
+  @media ($mq-mmd) {
+    height: 33vw;
+  }
+  @media ($mq-lg) {
+    height: 25vw;
+  }
+}
+
+.qp-Image {
+  object-fit: cover;
+  width: 100%;
+  // height: 100%;
+  flex: 100% 1 0;
+  @media ($mq-lg) {
+
+  }
+}
+
+.qp-ImageSlider_Controls {
+  padding: 0.5em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qp-Image_Control {
+  width: 3em; height: 3em; border-radius: 0.4em;
+  object-fit: cover;
+  margin: 0 0.5em;
+  box-shadow: -1px 1px 2px 0 rgba(30, 0, 50, 0.5), 1px 1px 2px 0 rgba(30, 0, 50, 0.7);
+  cursor: pointer;
+}
+
+.qp-Content {
+  order: 1;
+  grid-area: bodytext;
+  padding: 0 1em;
+  ul {
+    padding: 0 1em;
+    li { margin-bottom: 0.8em; }
+  }
+}
+
+.qp-Form {
+  order: 2;
+  grid-area: contact;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  padding: 1em;
+  margin-bottom: 3em;
+  @media($mq-mmd) {
+    padding: 0 1em;
+    margin-bottom: 3em;
+  }
+  @media ($mq-lg) { 
+    padding: 0;
+    margin-top: 0; padding-right: 1em;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+  }
+}
+
+.qp-Form_Title {
+  color: var(--primary-blue);
+  flex: 100% 1 0;
+  justify-self: center;
+  @media ($mq-mmd) { text-align: center; align-self: center;}
+  @media ($mq-lg) { align-self: center; margin-top: 0;  flex-shrink: 2;}
+}
+
+.qp-Form_Motto {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+.qp-Form_Input {
+  flex: 100%;
+  position: relative;
+  padding: 0;
+  margin-bottom: 1em;
+  label {
+    position: absolute;
+    top: 0.6em;
+    left: 0.5em;
+    transition: transform 0.222s ease-in, color 0.333s ease-in;
+    background: rgba(#fff, 0.9);
+    padding:  0 0.5em;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  input[type="email"], input[type="text"] {
+    padding: 0.7em 1em; width: 100%; margin-bottom: 1em;
+  }
+  input[type="email"]:focus + label,
+  input[type="text"]:focus + label{
+    transform: translateY(-1.3em); color: var(--swatch7);
+  }
+  input[type="email"]:valid + label,
+  input[type="text"]:valid + label{
+    transform: translateY(-1.3em); color: var(--primary-green);
+  }
+  @media ($mq-mmd) {
+    padding: 0 1em;
+    flex: 45% 1 0;
+    top: 0;
+    left: 0;
+    label {
+      left: 2em;
+    }
+    input[type="email"]:focus + label,
+    input[type="text"]:focus + label{
+      transform: translateY(-1.4em); color: var(--swatch7);
+    }
+    input[type="email"]:valid + label,
+    input[type="text"]:valid + label{
+      transform: translateY(-1.4em); color: var(--primary-green);
+    }
+  }
+  @media ($mq-lg) {
+    flex: 100% 1 1;
+    padding: 0;
+  }
+}
+
+.qp-Form_MessageWrapper {
+  // padding: 0 1em;
+  margin: 0;
+  display: flex;
+  flex-flow: wrap;
+  @media ($mq-mmd) {
+    flex: 100%;
+  }
+}
+
+.qp-Message_Label {
+  margin-bottom: 0.5em;
+  flex: 100% 1 0;
+  font-weight: 700;
+  color: var(--primary-text);
+}
+
+.qp-Message_Textarea {
+  display: block;
+  width: 100%;
+  flex: 100%;
+  padding: 1em;
+}

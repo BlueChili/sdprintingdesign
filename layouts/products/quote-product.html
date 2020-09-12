@@ -1,0 +1,61 @@
+{{ define "main" }}
+    {{ partial "SideNavbar.html" . }}
+    <main class="qp">
+        <section class="qp-Content">
+            <h1 class="qp-Title">{{ .Title }}</h1>
+            {{ .Content }}
+        </section>
+        <section class="qp-ImageSlider">
+            <div class="qp-Images_Container">
+                {{ range .Params.images }} 
+                <img class="qp-Image" src="{{ . }}" alt="">
+                {{ end }}
+            </div>
+            <div class="qp-ImageSlider_Controls">
+                {{ range $index, $v := .Params.images }} 
+                <img class="qp-Image_Control" src="{{ $v }}" alt="" {{ if eq $index 0}}aria-current="true"{{ end }} data-index={{$index}}>
+                {{ end }}
+            </div>
+        </section>
+        <form class="qp-Form" action="">
+            <h1 class="qp-Form_Title">Request a Quote</h1>
+            <p class="qp-Form_Motto">Drop us a message and we will reach back to you in no time!</p>
+
+            <div class="qp-Form_Input">
+                <input type="email" name="email" id="email" required>
+                <label for="email">Email:</label>
+            </div>
+            <div class="qp-Form_Input">
+                <input type="text" name="phone" id="subject" required>
+                <label for="phone">Phone(s):</label>
+            </div>
+            <div class="qp-Form_MessageWrapper">
+                <label for="message" class="qp-Message_Label">Tell us your {{ .Title }} needs:</label>
+                <textarea id="message" name="message" rows="10" class="qp-Message_Textarea"></textarea>
+            </div>
+        </form>
+    </main>
+{{ end }}
+
+{{ define "scripts" }}
+    <script>
+        const sliderControls = document.querySelectorAll(".qp-ImageSlider_Controls");
+        // const imageSlider = document.querySelector(".qp-ImageSlider");
+        const imageSlider = document.querySelector(".qp-Images_Container");
+
+          sliderControls.forEach((el, index) => {
+            el.addEventListener(`click`, (e) => {
+              toggleSlider(e);
+              // document.querySelector('.pc-Image_Control[aria-current="true"]').setAttribute('aria-current', false) 
+              // e.target.setAttribute('aria-current', true);
+            });
+          });
+
+          function toggleSlider (event) {
+            // event.preventDefault();
+            const index = event.target.dataset.index;
+            const displacementBase = document.querySelector(`.qp-Image`).getBoundingClientRect().width;
+            imageSlider.style.transform = `translate3d(-${index * displacementBase}px, 0 ,0)`;
+          }
+    </script>
+{{ end }}

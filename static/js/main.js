@@ -26,13 +26,16 @@ featuredCards.forEach((card) => {
 
 
 const caroussel = document.querySelectorAll(".pc-caroussel");
+const carousselControls = document.querySelectorAll(".pc-caroussel_Control");
 
 caroussel.forEach((card) => {
   const imagesContainer = card.querySelector(".pc-caroussel_ImagesContainer");
-  const thumbnails = card.querySelectorAll(".pc-caroussel_Control");
-  thumbnails.forEach((el, index) => {
+  carousselControls.forEach((el, index) => {
     el.addEventListener(`click`, (e) => {
       toggleSlider(e);
+      document.querySelector('.pc-caroussel_Control[aria-current="true"]').setAttribute('aria-current', false) 
+      e.target.setAttribute('aria-current', true);
+      if (e.isTrusted) clearInterval( carousselTicker );
     });
   });
   function toggleSlider (event) {
@@ -42,3 +45,11 @@ caroussel.forEach((card) => {
     imagesContainer.style.transform = `translate3d(-${index * displacementBase}px, 0 ,0)`;
   }
 });
+
+let carousselTicker = window.setInterval(function() {
+  if (!!document.querySelector('[aria-current="true"]').nextElementSibling) document.querySelector('[aria-current="true"]').nextElementSibling.click()
+  else { carousselControls[0].click() }
+}, 5000)
+
+carousselTicker();
+

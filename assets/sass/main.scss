@@ -5,10 +5,19 @@
   --primary-text: #393939;
   --primary-green: #00EFBD;
   --bezier: cubic-bezier(.82,.72,.32,.92);
+  --swatch1: #dd6aa6;
+  --swatch2: #d4ba4e;
+  --swatch3: #a0bf34;
+  --swatch4: #87ba18;
+  --swatch5: #48a12c;
+  --swatch6: #218f56;
+  --swatch7: #156e70;
+  --swatch-step: 12.85%;
 }
 $mq-md: "min-width: 450px";
 $mq-mmd: "min-width: 768px";
 $mq-lg: "min-width: 1300px";
+$mq-hd: "min-width: 1920px";
 * { box-sizing: border-box; }
 
 @import "Header.scss";
@@ -19,6 +28,8 @@ $mq-lg: "min-width: 1300px";
 @import "ShoppingCart.scss";
 @import "Minicart.scss";
 @import "Homepage.scss";
+@import "Caroussel.scss";
+@import "Quote-Product.scss";
 
 body { padding: 0; margin: 0; font-size: 16px;}
 h1, h2, h3, h4, p, button, span, pre, a, label, input, select, option, ul, li{ 

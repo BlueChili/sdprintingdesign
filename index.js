@@ -18,8 +18,10 @@ let res = https.get(reqString, (res) => {
     let parsed = JSON.parse(rawData);
     parsed.items.forEach(x => {
       delete x.url
-      fs.writeFileSync(`./content/products/${String(x.name).toLowerCase()}.html`, `${JSON.stringify(x, undefined, ' ')}
+      if (x.enabled == true) {
+        fs.writeFileSync(`./content/products/${String(x.name).toLowerCase()}.html`, `${JSON.stringify(x, undefined, ' ')}
     `)
+      }
     });
   })
 });

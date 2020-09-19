@@ -14,3 +14,9 @@ header {
 header .mediaicon { height: 2em; width: 2em; }
 header .socialmedia { margin-left: auto; }
 header .logo { width: 8em; }
+@media ($mq-mmd) {
+  header .logo { width: 10em; }
+}
+@media ($mq-lg) {
+  header .logo { width: 14em; }
+}

@@ -1,7 +1,6 @@
 {
   "title": "real state signs",
-  "layout": "quote-product",
-  "quote": "true",
+  "type": "quote",
   "images": ["/img/caroussel/coroplast-sign.jpg"]
 }
 

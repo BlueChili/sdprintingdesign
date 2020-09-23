@@ -1,8 +1,5 @@
 .qp{
   margin: 0;
-  @media ($mq-lg) {
-    margin-left: 160px;
-  }
   display: flex;
   flex-flow: column;
   @media ($mq-mmd){
@@ -19,6 +16,8 @@
     grid-template-areas: "images bodytext contact";
     grid-template-rows: 1fr;
     min-height: calc(100vh - 226px);
+    height: 100%;
+    margin-left: 1em;
   }
   grid-gap: 1em;
 }
@@ -27,6 +26,7 @@
   color: var(--primary-blue);
   font-size: 2em;
   margin-top: 0;
+  text-transform: Capitalize;
 }
 
 .qp-ImageSlider {

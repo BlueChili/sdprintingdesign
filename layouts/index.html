@@ -4,7 +4,7 @@
     {{ partial "SideNavbar.html" . }}
     {{ partial "HomeCaroussel.html" . }}
     <main class="pc-grid">
-        {{ range $product := where .Site.RegularPages "Section" "products" | first 3}}
+        {{ range $product := where (where .Site.RegularPages "Section" "products") ".Params.type" "!=" "quote" | first 3 }}
         <section class="pc-featured">
             <div class="pc-featured_ImagesContainer">
                 {{ range $src := $product.Params.media.images }}
@@ -24,7 +24,7 @@
             </div>
         </section>
         {{ end }}
-        {{ range $product := where (where .Site.RegularPages "Section" "products" | after 3) ".Params.quote" "!=" true}}
+        {{ range $product := where (where .Site.RegularPages "Section" "products") ".Params.type" "!=" "quote" | after 3}}
             <section class="pc-standard">
                 <div class="pc-standard_ImageContainer">
                     {{ $src := index $product.Params.media.images 0}}

@@ -31,7 +31,11 @@ $mq-hd: "min-width: 1920px";
 @import "Caroussel.scss";
 @import "Quote-Product.scss";
 
-body { padding: 0; margin: 0; font-size: 16px;}
+body { padding: 0; margin: 0; font-size: 16px;
+  display: flex;
+  flex-flow: wrap;
+}
+main { flex: 1 }
 h1, h2, h3, h4, p, button, span, pre, a, label, input, select, option, ul, li{ 
   color: var(--primary-text); 
   font-family: 'Nunito Sans';

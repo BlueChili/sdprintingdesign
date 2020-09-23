@@ -26,6 +26,7 @@ featuredCards.forEach((card) => {
 
 
 const caroussel = document.querySelectorAll(".pc-caroussel");
+if (caroussel.length) {
 const carousselControls = document.querySelectorAll(".pc-caroussel_Control");
 
 caroussel.forEach((card) => {
@@ -52,4 +53,4 @@ let carousselTicker = window.setInterval(function() {
 }, 5000)
 
 carousselTicker();
-
+}

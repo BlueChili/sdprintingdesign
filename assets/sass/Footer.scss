@@ -2,6 +2,7 @@ footer {
   background-image: linear-gradient( to right, #dd6aa6, #dd6aa6 14.28%, #d4ba4e 14.28%, #d4ba4e 28.57%, #a0bf34 28.57%, #a0bf34 42.85%, #87ba18 42.85%, #87ba18 57.14%, #48a12c 57.14%, #48a12c 71.42%, #218f56 71.42%, #218f56 85.71%, #156e70 85.71%);
   // &::before { position: absolute; top: 0; left: 0; right: 0; height: 100%; z-index: -1; content: ''; background-image: linear-gradient( to right, #dd6aa6, #dd6aa6 14.28%, #d4ba4e 14.28%, #d4ba4e 28.57%, #a0bf34 28.57%, #a0bf34 42.85%, #87ba18 42.85%, #87ba18 57.14%, #48a12c 57.14%, #48a12c 71.42%, #218f56 71.42%, #218f56 85.71%, #156e70 85.71%); }
   font-family: 'Nunito Sans', sans-serif;
+  flex: 100% 1 0;
   .business-info {
     padding-top: 2em;
     padding-bottom: 2em;
@@ -45,5 +46,8 @@ footer {
         margin-left: 0.6em;
       }
     }
+  }
+  @media ($mq-lg) {
+    margin-top: 1em;
   }
 }

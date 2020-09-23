@@ -1,10 +1,66 @@
-<section class="sb">
-    <ul>
+<section class="sb {{if .IsHome}}pc-sb{{ end}}">
+    <!-- <ul> -->
     {{ range where $.Site.RegularPages "Section" "products" }}
-        <li>
-            <a class="sb-Product" href="{{ .RelPermalink }}">{{ .Params.name }}</a>
-        </li>
+        <!-- <li> -->
+            <!-- <a class="sb&#45;Product" href="{{ .RelPermalink }}">{{ .Params.name }}</a> -->
+        <!-- </li> -->
     {{ end }}
+   <!-- </ul> -->
+
+    <h6 class="sb-Category">Vehicle Marketing</h6>
+    <ul>
+        <li><a class="sb-Product" href="/products/truck-lettering/">Truck Lettering</a></li>
+        <li><a class="sb-Product" href="/products/vehicle-wrapping/">Vehicle Wrapping</a></li>
+    </ul>
+
+    <h6 class="sb-Category">Signs</h6>
+    <ul>
+
+        <li> <a class="sb-Product" href="/products/channel-lettering/"></a> </li>
+        <li> <a class="sb-Product" href="/products/real-state-signs/">Real State Signs</a> </li>
+        <li> <a class="sb-Product" href="/products/banners-and-signs/">Banners & Signs</a> </li>
+    </ul>
+
+    <h6 class="sb-Category">Installations & Tradeshow</h6>
+    <ul>
+        <li> <a class="sb-Product" href="/products/tents/">Tents</a> </li>
+    <ul>
+
+    <h6 class="sb-Category">Silk Screen</h6>
+    <ul>
+
+        <li> <a class="sb-Product" href="/products/apron/">Apron</a> </li>
+
+        <li> <a class="sb-Product" href="/products/cap-solid/">Cap (Solid)</a> </li>
+
+        <li> <a class="sb-Product" href="/products/cap/">Cap</a> </li>
+
+        <li> <a class="sb-Product" href="/products/hoodie/">Hoodie</a> </li>
+
+        <li> <a class="sb-Product" href="/products/jacket-full-zip/">Jacket (Full Zip)</a> </li>
+
+        <li> <a class="sb-Product" href="/products/jacket-weatherproof/">Jacket (Weatherproof)</a> </li>
+
+        <li> <a class="sb-Product" href="/products/jacket-full-zip-womens-jacket/">Jacket, full zip women&#39;s jacket</a> </li>
+
+        <li> <a class="sb-Product" href="/products/nylon-vest-with-fleece-sleves/">Nylon vest with fleece sleves</a> </li>
+
+        <li> <a class="sb-Product" href="/products/performance-sport-shirt/">Performance Sport Shirt</a> </li>
+
+        <li> <a class="sb-Product" href="/products/performance-youth-sport-shirt/">Performance Youth Sport Shirt</a> </li>
+
+        <li> <a class="sb-Product" href="/products/polo-pique-sport-shirt/">Polo Pique Sport Shirt</a> </li>
+
+        <li> <a class="sb-Product" href="/products/safety-colors-long-sleeve-t-shirt/">Safety Colors Long Sleeve T-Shirt</a> </li>
+
+        <li> <a class="sb-Product" href="/products/safety-vest/">Safety Vest</a> </li>
+
+        <li> <a class="sb-Product" href="/products/t-shirt/">T-shirt</a> </li>
+
+        <li> <a class="sb-Product" href="/products/waist-apron/">Waist Apron</a> </li>
+
+
+
    </ul>
 </section>
 

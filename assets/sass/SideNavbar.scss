@@ -1,8 +1,9 @@
 .sb {
+  flex: auto 0 0;
   width: 0px;
   box-sizing: border-box;
-  padding-left: 1em;
-  padding-top: 0.4em;
+  // padding-left: 1em;
+  // padding-top: 0.4em;
   width: 100vw;
   z-index: 1;
   margin: 0;
@@ -31,20 +32,52 @@
     font-size: 0.8em;
   }
   @media all and ($mq-lg){
+    width: 220px;
     transform: translate3d(0,1em,0);
-    // position: relative;
+    position: relative;
     float: left;
   }
 }
 
+.sb.pc-sb{
+  position: absolute;
+  &.sb-visible {
+    @media ($mq-lg){
+      transform: translate3d(0,9em,0);
+    }
+  }
+  @media all and ($mq-lg) {
+    transform: translate3d(-100%,9em,0);
+  }
+}
 
-.sb-Product {
+.sb-Category, .sb-Product {
   color: white;
   font-family: 'Nunito Sans';
   font-weight: 600;
-  text-decoration: none;
+  // text-decoration: none;
   text-transform: capitalize;
   padding: 0.5em 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 1.1em;
   margin: 0;
   display: inline-block;
+}
+
+.sb-Product {
+  transition: background 0.333s ease-in;
+  background: transparent;
+  width: 100%;
+  &:hover {
+    background: var(--swatch1);
+  }
+}
+
+.sb-Category {
+  background: rgba(10,255,200, 0.8);
+  font-size: 1.2em;
+  color: var(--primary-text);
+  font-weight: 700;
+  width: 100%;
 }

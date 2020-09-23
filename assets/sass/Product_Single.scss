@@ -56,10 +56,11 @@
 .pd-Content {
   display: flex;
   // flex-wrap: wrap;
-  flex-grow: 0;
+  flex-grow: 1;
   // align-items: flex-start;
   flex-direction: column;
   justify-content: flex-start;
+  padding-right: 0em;
 }
 .pd-Title { 
   color: var(--primary-blue);
@@ -149,6 +150,7 @@
 .pd-Price {
   margin-right: 1em;
   width: 100%;
+  padding-right: 1em;
   text-align: right;
 }
 

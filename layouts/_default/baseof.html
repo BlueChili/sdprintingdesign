@@ -21,7 +21,7 @@
     {{ block "productmetadata" . }}
     {{ end }}
   </head>
-  <body>
+  <body class="{{if .IsHome}}hm{{ end}}">
     <script class="ProductConfigurations" type="application/json">{{ .Params }}</script>
     {{ partial "header.html" . }}
     {{ partial "navigation.html" . }}

@@ -4,9 +4,13 @@
   border: 1px solid var(--primary-blue);
   box-shadow: 0 0 3px 0 rgba(19,19,19,0.39);
   overflow: hidden;
-  width: 100%; height: #{'calc(50vw + 3em)'};
+  width: 100vw; height: #{'calc(50vw + 3em)'};
   @media ($mq-mmd) {
+    width: 100%;
     height: #{'calc(38vw + 3em)'};
+  }
+  @media ($mq-lg) {
+    flex: calc(100% - 220px) 1 0;
   }
 }
 .pc-caroussel_ImagesContainer { 
@@ -16,15 +20,20 @@
   transition: transform 0.4s;
   transition-timing-function: cubic-bezier(.82,.72,.32,.92);
   @media screen and ($mq-mmd) {height: 38vw;}
+  @media ($mq-lg) {width: calc(100vw -250px);}
 }
 
 .pc-caroussel_Item {
   display: grid;
   grid-template-columns: repeat(7, Calc(100vw / 7));
   grid-template-rows: repeat(8, 1fr);
-  width: 100%; height: 50vw;
+  width: 100vw; height: 50vw;
   @media ($mq-mmd) {
+    width:100%;
     height: 38vw;
+  }
+  @media ($mq-lg) {
+    grid-template-columns: #{'repeat(7, Calc(Calc(100vw - 230px) / 7))'};
   }
 }
 

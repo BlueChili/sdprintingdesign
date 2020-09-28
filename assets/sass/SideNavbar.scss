@@ -28,7 +28,7 @@
     width: 150px;
   }
   @media all and ($mq-mmd) {
-    width: 140px;
+    width: 220px;
     font-size: 0.8em;
   }
   @media all and ($mq-lg){
@@ -47,7 +47,9 @@
     }
   }
   @media all and ($mq-lg) {
-    transform: translate3d(-100%,9em,0);
+    transform: translate3d(0,0,0);
+    float: none;
+    position: relative;
   }
 }
 

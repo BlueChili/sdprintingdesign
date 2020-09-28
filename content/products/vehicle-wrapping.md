@@ -1,7 +1,7 @@
 {
   "title": "vehicle wrapping",
   "type": "quote",
-  "images": ["/img/qprods/vehicle-wrapping.jpg", "/img/qprods/truck-lettering.jpg"]
+  "images": ["/img/qprods/vehicle-wrapping.jpg", "/img/yelp/truck-lettering-4.jpg", "/img/yelp/vehicle-wrapping-2.jpg", "/img/yelp/vehicle-wrapping-4.jpg", "/img/yelp/vehicle-wrapping-3.jpg" ]
 }
 
 * Strenghten your branding using vehicle advertising.

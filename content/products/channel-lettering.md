@@ -1,7 +1,7 @@
 {
   "title":  "channel lettering",
   "type": "quote",
-  "images": ["/img/caroussel/channel-lettering.jpg"]
+  "images": ["/img/yelp/channel-lettering.jpg", "/img/yelp/channel-lettering-2.jpg", "/img/yelp/channel-lettering-3.jpg" ]
 }
 
 * Custom lettering in all formats, we are capable of accomodating to your brand 100%

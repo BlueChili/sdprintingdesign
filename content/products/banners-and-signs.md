@@ -2,7 +2,7 @@
   "title": "banners & signs",
   "slug": "banners-and-signs",
   "type": "quote",
-  "images": ["/img/caroussel/vinyl-sign.jpg"]
+  "images": ["/img/yelp/vinyl-sign.jpg", "/img/yelp/vinyl-signs-2.jpg", "/img/yelp/vinyl-signs-3.jpg"]
 }
 
 * Banners for all purposes

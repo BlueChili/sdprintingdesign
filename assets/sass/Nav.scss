@@ -8,6 +8,9 @@
   @media all and (min-width: 600px) {
     overflow-x: hidden;
   }
+  @media ($mq-lg) {
+    margin-bottom: 0;
+  }
 }
 
 .nv-link {
@@ -20,7 +23,10 @@
   font-family: 'Nunito Sans';
   color: var(--primary-blue);
   font-weight: 700;
-  @media all and ($mq-mmd) {
-    font-size: 0.7em;
+  @media ($mq-mmd) { font-size: 0.7em; }
+  @media all and ($mq-lg) {
+    font-size: 1em;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 } 

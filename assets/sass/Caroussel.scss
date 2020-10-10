@@ -50,17 +50,22 @@
   grid-column-start: 2;
   grid-column-end: 7;
   // background: linear-gradient(112deg, var(--swatch1) 0%,var(--swatch1) 5%,var(--swatch2) 5%,var(--swatch2) 17.85%,var(--swatch3) 17.85%,var(--swatch3) 30.7%,var(--swatch4) 30.7%,var(--swatch4) 43.55%,var(--swatch5) 43.55%,var(--swatch5) 56.4%, var(--swatch6) 56.4%, var(--swatch6) 69.25%, var(--swatch7) 69.25%, var(--swatch7) 82.1%);
-  background: linear-gradient(112deg, var(--swatch1) 0%,var(--swatch1) 10%,var(--swatch2) 10%,var(--swatch2) 22.85%,var(--swatch3) 22.85%,var(--swatch3) 35.7%,var(--swatch4) 35.7%,var(--swatch4) 48.55%,var(--swatch5) 48.55%,var(--swatch5) 61.4%, var(--swatch6) 61.4%, var(--swatch6) 74.25%, var(--swatch7) 74.25%, var(--swatch7) 82.1%);
+
+  // background: linear-gradient(112deg, var(--swatch1) 0%,var(--swatch1) 10%,var(--swatch2) 10%,var(--swatch2) 22.85%,var(--swatch3) 22.85%,var(--swatch3) 35.7%,var(--swatch4) 35.7%,var(--swatch4) 48.55%,var(--swatch5) 48.55%,var(--swatch5) 61.4%, var(--swatch6) 61.4%, var(--swatch6) 74.25%, var(--swatch7) 74.25%, var(--swatch7) 82.1%);
   font-weight: 900; font-size: 1.5em; text-transform: uppercase;
   padding: 0; margin: 0;
   margin-left: 0.5em;
-  -webkit-text-stroke: 1px white;
-  color: transparent;
+  // -webkit-text-stroke: 1px white;
+  // color: transparent;
+  color: white;
+  font-weight: 600;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.8);
   background-size: 100%;
   background-clip: text;
   transition: background-size 0.444s;
   transition-timing-function: cubic-bezier(.82,.72,.32,.92);
   justify-self: center;
+  text-align: center;
   &:hover { background-size: 140%;}
   @media ($mq-mmd) {
     grid-column-start: 2;

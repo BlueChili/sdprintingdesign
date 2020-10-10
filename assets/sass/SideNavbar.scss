@@ -11,7 +11,8 @@
   transform: translate3d(-100%, 0, 0);
   transition-timing-function: cubic-bezier(.82,.72,.32,.92);
   position: absolute;
-  background: radial-gradient(520.61% 145.15% at 121.62% 125.61%, #E40087 0%, #00AEEF 36.85%, #00AEEF 67.62%, rgba(0, 174, 239, 0.81) 81.66%, rgba(255, 255, 255, 0) 100%);
+  // background: radial-gradient(520.61% 145.15% at 121.62% 125.61%, #E40087 0%, #00AEEF 36.85%, #00AEEF 67.62%, rgba(0, 174, 239, 0.81) 81.66%, rgba(255, 255, 255, 0) 100%);
+  background: #fafafb;
   ul {
     position: relative;
     list-style: none;
@@ -50,6 +51,9 @@
     transform: translate3d(0,0,0);
     float: none;
     position: relative;
+    h6:first-child {
+      border-top: 1px solid var(--primary-blue);
+    }
   }
 }
 
@@ -58,28 +62,34 @@
   font-family: 'Nunito Sans';
   font-weight: 600;
   // text-decoration: none;
-  text-transform: capitalize;
   padding: 0.5em 0;
   padding-left: 1em;
   padding-right: 1em;
   font-size: 1.1em;
   margin: 0;
   display: inline-block;
+  text-transform: uppercase;
+  color: #333;
 }
 
 .sb-Product {
   transition: background 0.333s ease-in;
   background: transparent;
+  text-decoration: none;
+  font-weight: 700;
   width: 100%;
   &:hover {
-    background: var(--swatch1);
+    // background: var(--swatch1);
+    background: var(--primary-blue);
   }
 }
 
 .sb-Category {
-  background: rgba(10,255,200, 0.8);
+  // background: rgba(10,255,200, 0.8);
   font-size: 1.2em;
-  color: var(--primary-text);
-  font-weight: 700;
+  color: white;
+  background: var(--primary-text);
+  // text-decoration: underline;
+  font-weight: 900;
   width: 100%;
 }

@@ -1,7 +1,12 @@
 {
   "title": "real state signs",
   "type": "quote",
-  "images": ["/img/caroussel/coroplast-sign.jpg"]
+  "images": [ 
+    "/img/caroussel/coroplast-sign.jpg",
+    "/img/real-state/sign-1.jpg",
+    "/img/real-state/sign-3.jpg",
+    "/img/real-state/sign-2.jpg"
+  ]
 }
 
 * 100% customizable and durable signs made in coroplast

@@ -8,12 +8,22 @@
         <section class="qp-ImageSlider">
             <div class="qp-Images_Container">
                 {{ range .Params.images }} 
-                <img class="qp-Image" src="{{ . }}" alt="">
+                <picture>
+                    <source srcset="
+                    {{- replaceRE  ".jpg" "-thumb.jpg 640w, " . -}}
+                    {{- replaceRE  ".jpg" "-thumb@2x.jpg 1440w, " . -}}
+                    {{ . }}"
+                    alt="">
+                    <img src="{{ . }}" class="qp-Image">
+                </picture>
                 {{ end }}
             </div>
             <div class="qp-ImageSlider_Controls">
                 {{ range $index, $v := .Params.images }} 
-                <img class="qp-Image_Control" src="{{ $v }}" alt="" {{ if eq $index 0}}aria-current="true"{{ end }} data-index={{$index}}>
+                <img class="qp-Image_Control" srcset='
+                {{- replaceRE  ".jpg" "-thumb.jpg 600w, " $v -}}
+                {{- replaceRE  ".jpg" "-thumb@2x.jpg 1440w, " $v -}}
+                {{- $v -}}' alt="" {{ if eq $index 0}}aria-current="true"{{ end }} data-index={{$index}}>
                 {{ end }}
             </div>
         </section>
@@ -57,5 +67,11 @@
             const displacementBase = document.querySelector(`.qp-Image`).getBoundingClientRect().width;
             imageSlider.style.transform = `translate3d(-${index * displacementBase}px, 0 ,0)`;
           }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const sliderWidth = `${document.querySelector('.qp-ImageSlider').getClientRects()[0].width}px`;
+            document.querySelector('.qp-ImageSlider')
+                .style.setProperty("--qp-ImageHeight", sliderWidth); 
+        });
     </script>
 {{ end }}

@@ -4,7 +4,7 @@ title = "SD Printing & Design Inc. NY"
 #   [outputFormats.json]
 #     mediaType = "application/json"
 #     basename = "data"
-[outputs]
-  page = ["html", "json"]
-  section = ["html", "json"]
-  home = ["html"]
+# [outputs]
+#   page = ["html", "json"]
+#   section = ["html", "json"]
+#   home = ["html"]

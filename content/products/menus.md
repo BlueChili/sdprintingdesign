@@ -1,7 +1,13 @@
 {
   "title": "menus",
   "type": "quote",
-  "images": ["/img/menus/menu-1.jpg", "/img/menus/menu-2.jpg", "/img/menus/menu-3.jpg", "/img/menus/menu-4.jpg" ]
+  "images": [
+    "/img/menus/menu-1.jpg",
+    "/img/menus/menu-4.jpg",
+    "/img/menus/menu-7.jpg",
+    "/img/menus/menu-3.jpg",
+    "/img/menus/menu-6.jpg"
+  ]
 }
 
 Get the right ratio of information, function & branding in your menu.

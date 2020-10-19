@@ -1,9 +1,14 @@
 const mobileNav = document.querySelector('#sb-Toggle');
 const mobileLinks = document.querySelector('.sb');
-mobileNav.addEventListener('click', (e) => {
-  e.preventDefault();
-  mobileLinks.classList.toggle('sb-visible');
-})
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (window.outerWidth <= 1300) {
+    mobileNav.addEventListener('click', (e) => {
+      e.preventDefault();
+      mobileLinks.classList.toggle('sb-visible');
+    })
+  }
+});
 
 const featuredCards = document.querySelectorAll(".pc-featured");
 
@@ -52,5 +57,5 @@ let carousselTicker = window.setInterval(function() {
   else { carousselControls[0].click() }
 }, 5000)
 
-carousselTicker();
+carousselTicker;
 }

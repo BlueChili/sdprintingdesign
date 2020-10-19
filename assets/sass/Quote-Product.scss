@@ -7,7 +7,7 @@
     grid-template-columns: 1fr 1fr;
     // grid-template-rows: 1fr 1fr;
     grid-template-areas:
-      "images bodytext"
+     "images bodytext"
       "contact contact";
     margin-top: 2em;
   }
@@ -37,11 +37,9 @@
   height: calc(50vw + 4em);
   margin-bottom: 1em;
   order: 0;
+  --qp-ImageHeight: auto;
   @media ($mq-mmd) {
-    height: calc(35vw + 3em);
-  }
-  @media ($mq-lg) {
-    height: calc(25vw + 3em);
+    height: calc(var(--qp-ImageHeight) + 4.2em);
   }
   border: 1px solid var(--swatch1);
   display: flex;
@@ -51,27 +49,21 @@
 
 .qp-Images_Container {
   display: flex;
-  // width: #{'calc(100vw - 160px)'};
   width: 100%;
   height: 50vw;
   flex-flow: row nowrap;
   transition: transform 0.333s ease-in;
   @media ($mq-mmd) {
-    height: 33vw;
-  }
-  @media ($mq-lg) {
-    height: 25vw;
+    height: var(--qp-ImageHeight);
   }
 }
 
 .qp-Image {
   object-fit: cover;
-  width: 100%;
+  width: var(--qp-ImageHeight);
+  height: 100%;
   // height: 100%;
   flex: 100% 1 0;
-  @media ($mq-lg) {
-
-  }
 }
 
 .qp-ImageSlider_Controls {

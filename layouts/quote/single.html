@@ -14,16 +14,19 @@
                     {{- replaceRE  ".jpg" "-thumb@2x.jpg 1440w, " . -}}
                     {{ . }}"
                     alt="">
-                    <img src="{{ . }}" class="qp-Image">
+                    <img src="{{ . }}" srcset="{{ . }}" class="qp-Image">
                 </picture>
                 {{ end }}
             </div>
             <div class="qp-ImageSlider_Controls">
                 {{ range $index, $v := .Params.images }} 
-                <img class="qp-Image_Control" srcset='
-                {{- replaceRE  ".jpg" "-thumb.jpg 600w, " $v -}}
-                {{- replaceRE  ".jpg" "-thumb@2x.jpg 1440w, " $v -}}
-                {{- $v -}}' alt="" {{ if eq $index 0}}aria-current="true"{{ end }} data-index={{$index}}>
+                <picture>
+                    <source srcset='
+                        {{- replaceRE  ".jpg" "-thumb.jpg 600w, " $v -}}
+                        {{- replaceRE  ".jpg" "-thumb@2x.jpg 1440w, " $v -}}
+                        {{- $v -}}' >
+                    <img class="qp-Image_Control" src="{{- $v -}}" alt="" {{ if eq $index 0}}aria-current="true"{{ end }} data-index={{$index}}>
+                </picture>
                 {{ end }}
             </div>
         </section>
@@ -74,4 +77,13 @@
                 .style.setProperty("--qp-ImageHeight", sliderWidth); 
         });
     </script>
+            <script>
+                function originalSource (image) {
+                    image.onerror = () => image.closest('picture').children[0].remove();
+                }
+                document.querySelectorAll('.qp-Image')
+                    .forEach(originalSource);
+                document.querySelectorAll('.qp-Image_Control')
+                    .forEach(originalSource);
+            </script>
 {{ end }}

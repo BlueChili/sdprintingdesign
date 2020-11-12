@@ -2,10 +2,9 @@
   "title": "truck lettering",
   "type": "quote",
   "images": [
+    "/img/truck-lettering/z-canales.jpg",
     "/img/truck-lettering/branding.jpg",
-    "/img/yelp/truck-lettering-2.jpg",
-    "/img/yelp/truck-lettering-3.jpg",
-    "/img/caroussel/truck-lettering.jpg"
+    "/img/yelp/truck-lettering-3.jpg"
   ]
 }
 

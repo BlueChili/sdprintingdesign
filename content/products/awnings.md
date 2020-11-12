@@ -5,7 +5,8 @@
     "/img/awnings/awning-1.jpg",
     "/img/awnings/awning-2.jpg",
     "/img/awnings/awning-3.jpg",
-    "/img/awnings/awning-4.jpg",
+    "/img/awnings/awning-6.jpg",
+    "/img/awnings/awning-7.jpg",
     "/img/awnings/awning-5.jpg"
   ]
 }

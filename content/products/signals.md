@@ -1,11 +1,10 @@
 {
-  "title": "signs",
+  "title": "signals",
   "type": "quote",
   "images": [
     "/img/signs/sign-1.jpg",
     "/img/signs/sign-2.jpg",
-    "/img/signs/sign-3.jpg",
-    "/img/signs/sign-4.jpg"
+    "/img/signs/sign-3.jpg"
   ]
 }
 

@@ -3,9 +3,7 @@
   "type": "quote",
   "images": [
     "/img/channel-lettering/channel-lettering-1.jpg",
-    "/img/channel-lettering/channel-lettering-2.jpg",
-    "/img/channel-lettering/channel-lettering-3.jpg",
-    "/img/channel-lettering/channel-lettering-4.jpg" 
+    "/img/awnings/awning-4.jpg"
   ]
 }
 

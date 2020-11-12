@@ -2,10 +2,11 @@
   "title": "vehicle wrapping",
   "type": "quote",
   "images": [
-    "/img/qprods/vehicle-wrapping.jpg",
-    "/img/vehicle-wrapping/side-back.jpg",
-    "/img/vehicle-wrapping/kisspng.jpg",
+    "/img/vehicle-wrapping/guayaquileno.jpg",
+    "/img/yelp/vehicle-wrapping-3.jpg",
     "/img/vehicle-wrapping/side-blockchainit.jpg",
+    "/img/yelp/vehicle-wrapping-4.jpg",
+    "/img/qprods/vehicle-wrapping.jpg",
     "/img/vehicle-wrapping/hartford.jpg"
   ]
 }

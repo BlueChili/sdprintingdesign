@@ -3,6 +3,7 @@
   "type": "quote",
   "images": [
     "/img/banners/banner-stand.jpg",
+    "/img/banners/cafe-2000.jpg",
     "/img/banners/banner-1.jpg",
     "/img/banners/banner-2.jpg",
     "/img/banners/banner-3.jpg",

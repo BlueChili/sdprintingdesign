@@ -19,6 +19,7 @@
     </script>
     {{ block "productmetadata" . }}
     {{ end }}
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"> 
   </head>
   <body class="{{if .IsHome}}hm{{ end}}">
     <script class="ProductConfigurations" type="application/json">{{ .Params }}</script>
@@ -38,6 +39,5 @@
     {{ partial "MiniCart-Item.html" . }}
 
     {{ block "scripts" . }} {{ end }}
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"> 
   </body>
 </html>

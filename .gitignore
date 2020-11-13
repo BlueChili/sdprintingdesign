@@ -15,3 +15,4 @@ tags
 content/products/*.html
 env
 package-lock.json
+*.xcf

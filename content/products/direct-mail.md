@@ -8,7 +8,7 @@
   ]
 }
 
-Reach your target audience with our direct mailing services.
 
-* Reach Build a localized reach 
-* We design & print in a variety of formats and sizes to suit the needs of your business
+SD-Printing & Design specializes in professional, personalized, and high speed direct mail projects of all types.  We have control over the entire job, from list preparation to Post Office delivery, since everything is done on the premises.
+
+Bulk mailing allows you to advertise your business in a cost efficient way; and with our fast turn-around-times, you will be saving money and time while doing so.

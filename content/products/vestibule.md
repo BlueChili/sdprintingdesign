@@ -3,6 +3,7 @@
   "type": "quote",
   "images": [
     "/img/foyer/grand-canyon.jpg",
+    "/img/foyer/leos.jpg",
     "/img/channel-lettering/channel-lettering-2.jpg",
     "/img/foyer/gran-uruguaya.jpg"
   ]

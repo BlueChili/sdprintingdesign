@@ -1,5 +1,5 @@
 {
-  "title": "mounted displays & signage",
+  "title": "mounted displays",
   "type": "quote",
   "images": [ 
     "/img/mounted-displays/sdprinting.jpg",

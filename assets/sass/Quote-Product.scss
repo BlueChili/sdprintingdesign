@@ -86,9 +86,12 @@
   order: 1;
   grid-area: bodytext;
   padding: 0 1em;
+  p, h1, h2, h3, h4, h5 {
+    line-height: 2
+  }
   ul {
     padding: 0 1em;
-    li { margin-bottom: 0.8em; }
+    li { margin-bottom: 1.2em; line-height: 1.5; }
   }
 }
 

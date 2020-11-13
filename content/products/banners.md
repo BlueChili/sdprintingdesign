@@ -17,10 +17,11 @@
 ### We have provide a wide selection of banners to suit your needs, you can orders from us:
 
 * Roll-ups (retractable banners)
-* Fold banners
-* Flat Banners
+* Pole Banners
+* Flag Banners
 * Step & Repeat
 * Fabric Banners
+* Mesh Banners
 * Customized Banners
 
 

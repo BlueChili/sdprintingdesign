@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', () => {
+
 const cart = document.querySelector(`.hd-ShoppingCart`);
 const cartCounter = document.querySelector(`.hd-ShoppingCart_Counter`);
 // let products = JSON.parse(document.querySelector(`[type="application/json"].ProductsIndex`).textContent);
@@ -129,3 +131,5 @@ function mcQuantityIncrease (e) {
 function itemPriceUpdater (item, price, quantity) {
   item.querySelector(`.mc-ItemPrice`).innerText = `$${ price * quantity }`;
 }
+
+});

@@ -13,3 +13,5 @@ node_modules
 tags
 
 content/products/*.html
+env
+package-lock.json

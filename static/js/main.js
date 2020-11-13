@@ -1,14 +1,14 @@
+document.addEventListener('DOMContentLoaded', () => {
+
 const mobileNav = document.querySelector('#sb-Toggle');
 const mobileLinks = document.querySelector('.sb');
 
-window.addEventListener('DOMContentLoaded', () => {
-  if (window.outerWidth <= 1300) {
-    mobileNav.addEventListener('click', (e) => {
-      e.preventDefault();
-      mobileLinks.classList.toggle('sb-visible');
-    })
-  }
-});
+if (window.outerWidth <= 1300) {
+  mobileNav.addEventListener('click', (e) => {
+    e.preventDefault();
+    mobileLinks.classList.toggle('sb-visible');
+  })
+}
 
 const featuredCards = document.querySelectorAll(".pc-featured");
 
@@ -59,3 +59,4 @@ let carousselTicker = window.setInterval(function() {
 
 carousselTicker;
 }
+});

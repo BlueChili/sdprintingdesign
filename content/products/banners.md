@@ -17,7 +17,7 @@
 
 ### We have provide a wide selection of banners to suit your needs, you can orders from us:
 
-* Roll-ups (retractable banners)
+* Roll-ups (Retractable Banners)
 * Pole Banners
 * Flag Banners
 * Step & Repeat

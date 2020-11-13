@@ -86,15 +86,20 @@
   order: 1;
   grid-area: bodytext;
   padding: 0 1em;
-  p, h1, h2, h3, h4, h5 {
+  p, {
     line-height: 2
   }
   p, li {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   ul {
     padding: 0 1em;
     li { margin-bottom: 1.2em; line-height: 1.5; }
+  }
+  @media (min-width: 1440px) {
+    p, li {
+      font-size: 1.5em;
+    }
   }
 }
 

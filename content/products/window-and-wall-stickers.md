@@ -15,10 +15,11 @@
 * We also provide a range of standard options and sizes to help you choose
 
 
-* Sticker window
-* Frosted window decal
-* Perforated window decal
-* Vynil lettering (transfer tape cutted letters)
-* Clear window decals
-* Static opaque window
-* Opaque window decals
+* Sticker Window
+* Frosted Window Decal
+* Perforated Window Decal
+* Vynil Lettering (transfer tape cutted letters)
+* Clear Window Decals
+* Static Opaque Window
+* Opaque Window Decals
+* Wall film

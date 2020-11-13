@@ -24,9 +24,11 @@
 }
 
 .qp-Title {
-  color: var(--primary-blue);
+  color: white;
+  background: var(--primary-blue);
   font-size: 2em;
   margin-top: 0;
+  padding: 0.2em 1em;
   text-transform: Capitalize;
 }
 

@@ -20,6 +20,11 @@
     
     {{- block "productmetadata" . -}}{{- end -}}
     
+    <link rel="icon" href="/img/favicons/32.png" sizes="32x32">
+    <link rel="icon" href="/img/favicons/192.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="/img/favicons/apple.png">
+    <meta name="msapplication-TileImage" content="/img/favicons/ms.png">
+
   </head>
   <body class="{{if .IsHome}}hm{{ end}}">
     <script class="ProductConfigurations" type="application/json">{{ .Params }}</script>

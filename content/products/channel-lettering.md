@@ -3,6 +3,7 @@
   "type": "quote",
   "images": [
     "/img/channel-lettering/channel-lettering-1.jpg",
+    "/img/channel-lettering/nyanza.jpg",
     "/img/awnings/awning-4.jpg"
   ]
 }

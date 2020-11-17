@@ -1,7 +1,13 @@
 {{ define "scripts" }}
-{{ $environment := .Hugo.Environment }}
-{{ $component := resources.Get "scripts/product.jsx" | js.Build (dict "targetPath" "producto.js" "defines" (dict "process.env.NODE_ENV" `"$environment"`) "format" "cjs") | resources.Fingerprint }}
-    <script src="{{ $component.Permalink }}"></script>
+
+    {{ if .Site.IsServer }}
+        {{ $component := resources.Get "scripts/product.jsx" | js.Build (dict "targetPath" "producto.js" "defines" (dict "process.env.NODE_ENV" `"development"`) "format" "cjs") | resources.Fingerprint }}
+        <script src="{{ $component.Permalink }}"></script>
+    {{ else }}
+        {{ $component := resources.Get "scripts/product.jsx" | js.Build (dict "targetPath" "producto.js" "defines" (dict "process.env.NODE_ENV" `"production"`) "format" "cjs") | resources.Fingerprint }}
+        <script src="{{ $component.Permalink }}"></script>
+    {{ end }}
+
 {{ end }}
 
 {{ define "main" }}

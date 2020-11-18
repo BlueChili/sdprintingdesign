@@ -19,7 +19,7 @@
             <div class="pc-featured_Info">
                 <a href="{{$product.Permalink}}"><h2 class="pc-featured_Title">{{ $product.Params.name }}</h2></a>
                 <section class="pc-featured_Description">{{ safeHTML $product.Params.description }}</section>
-                <span class="pc-featured_Price">Starts at ${{ .Params.Price }}</span>
+                <span class="pc-featured_Price">Starts at ${{ .Params.Price | lang.NumFmt 2 }}</span>
                 <a class="pc-featured_Cta" href="{{ $product.Permalink }}">Order Now</a>
             </div>
         </section>
@@ -33,7 +33,7 @@
                 <div class="pc-standard_Info">
                     <h2 class="pc-standard_Title">{{ $product.Params.name }}</h2>
                     <section class="pc-featured_Description">{{ safeHTML $product.Params.description }}</section>
-                    <span class="pc-standard_Price">Starts at ${{ .Params.Price }}</span>
+                    <span class="pc-standard_Price">Starts at ${{ .Params.Price | lang.NumFmt 2 }}</span>
                     <a class="pc-standard_Cta" href="{{ $product.Permalink }}">Order Now</a>
                 </div>
             </section>

@@ -5,6 +5,7 @@
     "/img/mounted-displays/sdprinting.jpg",
     "/img/mounted-displays/two-dudes.jpg",
     "/img/mounted-displays/towne-centre.jpg",
+    "/img/mounted-displays/laguardia-1.jpg",
     "/img/mounted-displays/airport.jpg",
     "/img/mounted-displays/attorneys.jpg",
     "/img/signs/sign-1.jpg"

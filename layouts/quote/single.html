@@ -6,6 +6,7 @@
             {{ .Content }}
         </section>
         <section class="qp-ImageSlider">
+            <div class="qp-wrapper">
             <div class="qp-Images_Container">
                 {{ range .Params.images }} 
                 <picture>
@@ -29,6 +30,7 @@
                 </picture>
                 {{ end }}
             </div>
+            </div>
         </section>
         <form class="qp-Form" action="">
             <h1 class="qp-Form_Title">Request a Quote</h1>
@@ -47,43 +49,18 @@
                 <textarea id="message" name="message" rows="10" class="qp-Message_Textarea"></textarea>
             </div>
         </form>
+        <div class="qp-ReactWrapper"></div>
     </main>
 {{ end }}
 
 {{ define "scripts" }}
-    <script>
-        const sliderControls = document.querySelectorAll(".qp-ImageSlider_Controls");
-        // const imageSlider = document.querySelector(".qp-ImageSlider");
-        const imageSlider = document.querySelector(".qp-Images_Container");
+    {{ $defines := dict "process.env.NODE_ENV" `"production"` }}
 
-          sliderControls.forEach((el, index) => {
-            el.addEventListener(`click`, (e) => {
-              toggleSlider(e);
-              // document.querySelector('.pc-Image_Control[aria-current="true"]').setAttribute('aria-current', false) 
-              // e.target.setAttribute('aria-current', true);
-            });
-          });
+    {{ if .Site.IsServer }}
+        {{ $defines = dict "process.env.NODE_ENV" `"development"`}}
+    {{ end }}
 
-          function toggleSlider (event) {
-            // event.preventDefault();
-            const index = event.target.dataset.index;
-            const displacementBase = document.querySelector(`.qp-Image`).getBoundingClientRect().width;
-            imageSlider.style.transform = `translate3d(-${index * displacementBase}px, 0 ,0)`;
-          }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            const sliderWidth = `${document.querySelector('.qp-ImageSlider').getClientRects()[0].width}px`;
-            document.querySelector('.qp-ImageSlider')
-                .style.setProperty("--qp-ImageHeight", sliderWidth); 
-        });
-    </script>
-            <script>
-                function originalSource (image) {
-                    image.onerror = () => image.closest('picture').children[0].remove();
-                }
-                document.querySelectorAll('.qp-Image')
-                    .forEach(originalSource);
-                document.querySelectorAll('.qp-Image_Control')
-                    .forEach(originalSource);
-            </script>
+    {{ $opts := dict "targetPath" "q-product.js" "defines" $defines "format" "cjs" }}
+    {{ $component := resources.Get "scripts/quote-products.jsx" | js.Build $opts | resources.Fingerprint }}
+    <script src="{{ $component.Permalink }}"></script>
 {{ end }}

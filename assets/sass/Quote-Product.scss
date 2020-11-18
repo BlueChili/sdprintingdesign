@@ -32,6 +32,9 @@
   text-transform: Capitalize;
 }
 
+.qp-wrapper {
+  border: 1px solid var(--swatch1);
+}
 .qp-ImageSlider {
   grid-area: images;
   overflow: hidden;
@@ -41,12 +44,13 @@
   order: 0;
   --qp-ImageHeight: auto;
   @media ($mq-mmd) {
-    height: calc(var(--qp-ImageHeight) + 4.2em);
+    // height: calc(var(--qp-ImageHeight) + 4.2em);
+    height: auto;
   }
-  border: 1px solid var(--swatch1);
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
+  flex-shrink: 1;
+  justify-content: flex-start;
 }
 
 .qp-Images_Container {
@@ -72,6 +76,7 @@
 .qp-ImageSlider_Controls {
   padding: 0.5em 0;
   display: flex;
+  flex-flow: wrap;
   justify-content: center;
   align-items: center;
 }

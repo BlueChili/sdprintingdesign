@@ -3,7 +3,10 @@
   "type": "quote",
   "images": [
     "/img/window-wall-stickers/tds.jpg",
-    "/img/window-wall-stickers/fruits.jpg",
+    "/img/window-wall-stickers/cherry-valley-4.jpg",
+    "/img/window-wall-stickers/cherry-valley-1.jpg",
+    "/img/window-wall-stickers/cherry-valley-2.jpg",
+    "/img/window-wall-stickers/cherry-valley-3.jpg",
     "/img/yelp/window-sticker-1.jpg",
     "/img/yelp/window-sticker-4.jpg",
     "/img/window-wall-stickers/wws-1.jpg",

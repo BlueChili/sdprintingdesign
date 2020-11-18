@@ -1,12 +1,15 @@
 {{ define "scripts" }}
 
+    {{ $defines := dict "process.env.NODE_ENV" `"production"` }}
+
     {{ if .Site.IsServer }}
-        {{ $component := resources.Get "scripts/product.jsx" | js.Build (dict "targetPath" "producto.js" "defines" (dict "process.env.NODE_ENV" `"development"`) "format" "cjs") | resources.Fingerprint }}
-        <script src="{{ $component.Permalink }}"></script>
-    {{ else }}
-        {{ $component := resources.Get "scripts/product.jsx" | js.Build (dict "targetPath" "producto.js" "defines" (dict "process.env.NODE_ENV" `"production"`) "format" "cjs") | resources.Fingerprint }}
-        <script src="{{ $component.Permalink }}"></script>
+        {{ $defines = dict "process.env.NODE_ENV" `"development"`}}
     {{ end }}
+
+    {{ $opts := dict "targetPath" "q-product.js" "defines" $defines "format" "cjs" }}
+    {{ $component := resources.Get "scripts/quote-products.jsx" | js.Build $opts | resources.Fingerprint }}
+
+    <script src="{{ $component.Permalink }}"></script>
 
 {{ end }}
 

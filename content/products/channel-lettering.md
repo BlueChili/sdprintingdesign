@@ -2,8 +2,9 @@
   "title":  "channel lettering",
   "type": "quote",
   "images": [
-    "/img/channel-lettering/channel-lettering-1.jpg",
     "/img/channel-lettering/nyanza.jpg",
+    "/img/channel-lettering/oxigeno.jpg",
+    "/img/channel-lettering/channel-lettering-1.jpg",
     "/img/awnings/awning-4.jpg"
   ]
 }

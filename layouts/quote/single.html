@@ -60,7 +60,7 @@
         {{ $defines = dict "process.env.NODE_ENV" `"development"`}}
     {{ end }}
 
-    {{ $opts := dict "targetPath" "q-product.js" "defines" $defines "format" "cjs" }}
+    {{ $opts := dict "targetPath" "/js/quote-product.js" "defines" $defines "format" "cjs" }}
     {{ $component := resources.Get "scripts/quote-products.jsx" | js.Build $opts | resources.Fingerprint }}
-    <script src="{{ $component.Permalink }}"></script>
+    <script src="{{ $component.RelPermalink }}"></script>
 {{ end }}

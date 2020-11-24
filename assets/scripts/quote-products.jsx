@@ -26,3 +26,11 @@ document.querySelectorAll('.qp-Image')
   .forEach(originalSource);
 document.querySelectorAll('.qp-Image_Control')
   .forEach(originalSource);
+
+if (window.innerWidth >= 768) {
+  document.querySelector('.qp-Images_Container').onclick = function() {
+    const pics = this.innerHTML;
+    console.log( pics );
+    console.log( this );
+  }
+}

@@ -4,6 +4,9 @@
   "images": [
     "/img/foyer/grand-canyon.jpg",
     "/img/foyer/margaritas.jpg",
+    "/img/foyer/margaritas-2.jpg",
+    "/img/foyer/raices-1.jpg",
+    "/img/foyer/raices-2.jpg",
     "/img/foyer/leos.jpg",
     "/img/channel-lettering/channel-lettering-2.jpg",
     "/img/foyer/gran-uruguaya.jpg"

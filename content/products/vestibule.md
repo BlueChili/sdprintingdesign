@@ -8,6 +8,7 @@
     "/img/foyer/raices-1.jpg",
     "/img/foyer/raices-2.jpg",
     "/img/foyer/leos.jpg",
+    "/img/foyer/barriles.jpg",
     "/img/channel-lettering/channel-lettering-2.jpg",
     "/img/foyer/gran-uruguaya.jpg"
   ]
